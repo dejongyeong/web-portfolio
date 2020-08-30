@@ -2,6 +2,8 @@ import React from 'react';
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 import { Parallax } from 'react-parallax';
 
+import HeroButton from './HeroButton';
+
 import Backdrop from '../img/hero-background-img.jpg';
 import Avatar from '../img/hero-avatar.png';
 
@@ -175,6 +177,10 @@ function Hero() {
                     suscipit laboriosam, nisi ut aliquid ex ea commodi
                     consequatur?"
                   </Typography>
+                  <HeroButton
+                    profile={'Profile'}
+                    contact={'Contact'}
+                  ></HeroButton>
                 </Grid>
               </Grid>
             </div>
