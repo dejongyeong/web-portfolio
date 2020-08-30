@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Grid,
-  makeStyles,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@material-ui/core';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 import { Parallax } from 'react-parallax';
 
 import Backdrop from '../img/hero-background-img.jpg';
@@ -14,16 +8,12 @@ import Avatar from '../img/hero-avatar.png';
 const useStyles = makeStyles((theme) => ({
   main: {
     height: '100vh',
-    width: 'auto',
+    width: '100vw',
     alignItems: 'center',
     display: 'flex',
     justifyContent: 'center',
-    //TODO: Fix Break Points
     [theme.breakpoints.down('sm')]: {
-      height: '155vh',
-    },
-    [theme.breakpoints.between('sm', 'md')]: {
-      height: '120vh',
+      height: '110vh',
     },
   },
   layer: {
@@ -35,12 +25,8 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw',
     height: '100vh',
     [theme.breakpoints.down('sm')]: {
-      height: '155vh',
-      width: '155vw',
-    },
-    [theme.breakpoints.between('sm', 'md')]: {
-      height: '120vh',
-      width: '120vw',
+      height: '110vh',
+      width: '110vw',
     },
   },
   content: {
@@ -76,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('md')]: {
       maxWidth: '230px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '60%',
     },
   },
   rightContent: {
@@ -113,9 +102,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '1.02vw',
       },
       [theme.breakpoints.between('xs', '768')]: {
-        fontSize: '85%',
+        fontSize: '80%',
         marginTop: '5%',
-        lineHeight: '1.3rem',
+        lineHeight: '1.4rem',
       },
     },
   },
