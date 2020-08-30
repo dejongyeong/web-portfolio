@@ -1,5 +1,11 @@
 import React from 'react';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import {
+  Grid,
+  makeStyles,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core';
 import { Parallax } from 'react-parallax';
 
 import Backdrop from '../img/hero-background-img.jpg';
@@ -61,15 +67,15 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     display: 'block',
     margin: '0 auto',
-    [theme.breakpoints.up('xxxl')]: {
-      maxWidth: '600px',
+    [theme.breakpoints.up('xxl')]: {
+      maxWidth: '90%',
     },
     [theme.breakpoints.down('lg')]: {
       maxWidth: '290px',
       marginTop: '2%',
     },
     [theme.breakpoints.down('md')]: {
-      maxWidth: '200px',
+      maxWidth: '230px',
     },
   },
   rightContent: {
@@ -84,16 +90,17 @@ const useStyles = makeStyles((theme) => ({
 
     '& h1': {
       [theme.breakpoints.up('xl')]: {
-        fontSize: '6.1vw',
+        fontSize: '5.25vw',
       },
-      [theme.breakpoints.between('767', '1024')]: {
+      [theme.breakpoints.down('lg', '1023')]: {
         fontSize: '7vw',
       },
       [theme.breakpoints.between('519', '767')]: {
-        fontSize: '9vw',
+        fontSize: '8vw',
       },
       [theme.breakpoints.between('xs', '519')]: {
-        fontSize: '9.1vw',
+        fontSize: '9vw',
+        marginTop: '4%',
       },
     },
 
@@ -103,10 +110,10 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: '0.5%',
       fontFamily: 'Montserrat, sans-serif',
       [theme.breakpoints.up('xxl')]: {
-        fontSize: '1.05vw',
+        fontSize: '1.02vw',
       },
       [theme.breakpoints.between('xs', '768')]: {
-        fontSize: '0.90rem',
+        fontSize: '85%',
         marginTop: '5%',
         lineHeight: '1.3rem',
       },

@@ -22,7 +22,6 @@ const theme = createMuiTheme({
       lg: 768,
       xl: 1024,
       xxl: 1440,
-      xxxl: 2560,
     },
   },
 });
