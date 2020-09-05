@@ -7,14 +7,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    marginTop: '3%',
-    [theme.breakpoints.down('1024')]: {
-      justifyContent: 'center',
-      marginTop: '4%',
-    },
-    fontSize: '0.73rem',
-    [theme.breakpoints.up('xl')]: {
-      fontSize: '1.1rem',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      '& button:nth-child(2)': {
+        marginTop: '3%',
+      },
     },
   },
 }));
@@ -22,21 +19,21 @@ const useStyles = makeStyles((theme) => ({
 const StyledButton = withStyles({
   root: {
     backgroundColor: 'transparent',
-    marginRight: '2%',
+    marginRight: '3%',
     width: '200px',
-    borderRadius: '50px',
+    borderRadius: '0',
     boxSizing: 'border-box',
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat, sans-serif',
     border: '2px solid #2E585B',
     fontStyle: 'normal',
     fontWeight: '600',
     letterSpacing: '0.08em',
-    color: '#2e2e2e',
+    color: '#222831',
     '&:hover': {
       backgroundColor: '#2e585d',
       borderColor: '#2e585d',
       color: '#ffffff',
-      boxShadow: '5px 5px 1px 0.15rem rgba(57, 62, 70, 0.1)',
+      boxShadow: '2px 2px 1px 0.2rem rgba(57, 62, 70, 0.1)',
     },
   },
 })(Button);

@@ -1,23 +1,14 @@
 import React from 'react';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import { Parallax } from 'react-parallax';
 
 import HeroButton from './HeroButton';
+import SocialIcons from './SocialIcons';
 
 import Backdrop from '../img/hero-background-img.jpg';
 import Avatar from '../img/hero-avatar.png';
 
 const useStyles = makeStyles((theme) => ({
-  main: {
-    height: '100vh',
-    width: '100vw',
-    alignItems: 'center',
-    display: 'flex',
-    justifyContent: 'center',
-    [theme.breakpoints.down('sm')]: {
-      height: '110vh',
-    },
-  },
   layer: {
     position: 'absolute',
     background: 'rgba(0, 173, 181, 0.15)',
@@ -27,88 +18,93 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw',
     height: '100vh',
     [theme.breakpoints.down('sm')]: {
-      height: '110vh',
-      width: '110vw',
+      height: '120vh',
+      width: '120vw',
+    },
+  },
+  main: {
+    height: '100vh',
+    width: '100vw',
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      height: '120vh',
     },
   },
   content: {
-    width: '80%',
-    height: '90vh',
+    width: '90%',
+    height: '80%',
     margin: '0 auto',
-    [theme.breakpoints.down('sm')]: {
-      height: '95vh',
-      width: '90%',
-    },
     position: 'relative',
-  },
-  gridWrapper: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '100%',
-    height: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxSizing: 'border-box',
   },
   avatar: {
-    maxWidth: '400px',
+    maxWidth: '220px',
     height: 'auto',
     width: '100%',
     display: 'block',
     margin: '0 auto',
-    [theme.breakpoints.up('xxl')]: {
-      maxWidth: '90%',
-    },
-    [theme.breakpoints.down('lg')]: {
-      maxWidth: '290px',
-      marginTop: '2%',
-    },
+  },
+  icons: {
+    maxWidth: '220px',
+    width: '100%',
+    boxSizing: 'border-box',
+    margin: '0.9% auto',
     [theme.breakpoints.down('md')]: {
-      maxWidth: '230px',
+      margin: '2% auto',
     },
     [theme.breakpoints.down('sm')]: {
-      maxWidth: '60%',
+      margin: '2% auto 3% auto',
     },
   },
-  rightContent: {
-    [theme.breakpoints.between('xs', 'lg')]: {
-      textAlign: 'center',
-      marginTop: '3%',
-    },
-    display: 'inline-block',
-    textAlign: 'left',
-    padding: '1.5%',
-    color: '#101010',
-
-    '& h1': {
-      [theme.breakpoints.up('xl')]: {
-        fontSize: '5.25vw',
-      },
-      [theme.breakpoints.down('lg', '1023')]: {
-        fontSize: '7vw',
-      },
-      [theme.breakpoints.between('519', '767')]: {
-        fontSize: '8vw',
-      },
-      [theme.breakpoints.between('xs', '519')]: {
-        fontSize: '9vw',
-        marginTop: '4%',
-      },
-    },
-
-    '& p': {
+  intro: {
+    width: '100%',
+    height: 'auto',
+    textAlign: 'center',
+    marginTop: '1.5%',
+    color: '#2e585b',
+    '& h6': {
+      letterSpacing: '0.1rem',
       fontWeight: '400',
-      margin: '2% auto',
-      paddingLeft: '0.5%',
-      fontFamily: 'Montserrat, sans-serif',
-      [theme.breakpoints.up('xxl')]: {
-        fontSize: '1.02vw',
-      },
-      [theme.breakpoints.between('xs', '768')]: {
-        fontSize: '80%',
-        marginTop: '5%',
-        lineHeight: '1.4rem',
-      },
+      fontFamily: 'Lato, sans-serif',
+      fontSize: '1rem',
+      textTransform: 'lowercase',
+      color: '#393e46',
     },
+    '& h2': {
+      letterSpacing: '0.15rem',
+      textTransform: 'uppercase',
+      fontWeight: '800',
+      marginTop: '0.5%',
+    },
+  },
+  description: {
+    width: '80%',
+    height: 'auto',
+    margin: '1% auto 2% auto',
+    lineHeight: '1.5rem',
+    '& p': {
+      color: '#222831',
+      fontSize: '1.05rem',
+      fontWeight: 'normal',
+      fontFamily: 'Lato, sans-serif',
+    },
+    [theme.breakpoints.down('md')]: {
+      margin: '3.5% auto 6% auto',
+    },
+  },
+  buttonWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '50%',
+    height: 'auto',
+    margin: '2% auto 0 auto',
   },
 }));
 
@@ -119,7 +115,7 @@ function Hero() {
     <div id="landing-page">
       <Parallax
         bgImage={Backdrop}
-        strength={100}
+        strength={200}
         bgImageAlt="Background Image"
         bgImageStyle={{
           opacity: '50%',
@@ -132,57 +128,33 @@ function Hero() {
       >
         <div className={styles.main}>
           <div className={styles.content}>
-            <div className={styles.gridWrapper}>
-              <Grid container>
-                <Grid
-                  container
-                  item
-                  xs={12}
-                  xl={4}
-                  alignItems="center"
-                  justify="center"
-                >
-                  <img
-                    alt="Avatar PNG"
-                    src={Avatar}
-                    className={styles.avatar}
-                  />
-                </Grid>
-                <Grid
-                  container
-                  item
-                  xs={12}
-                  xl={8}
-                  className={styles.rightContent}
-                >
-                  <Typography variant="h1" gutterBottom>
-                    Hi, I'm <span style={{ color: '#2e585b' }}>De Jong.</span>
-                  </Typography>
-                  <Typography variant="body1">
-                    I'm a{' '}
-                    <span style={{ color: '#2e585b', fontWeight: 'bold' }}>
-                      Postgraduate Research Student.
-                    </span>{' '}
-                    "Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                    aut fugit, sed quia consequuntur magni dolores eos qui
-                    ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                    qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                    velit, sed quia non numquam eius modi tempora incidunt ut
-                    labore et dolore magnam aliquam quaerat voluptatem. Ut enim
-                    ad minima veniam, quis nostrum exercitationem ullam corporis
-                    suscipit laboriosam, nisi ut aliquid ex ea commodi
-                    consequatur?"
-                  </Typography>
-                  <HeroButton
-                    profile={'Profile'}
-                    contact={'Contact'}
-                  ></HeroButton>
-                </Grid>
-              </Grid>
+            <img alt="Avatar PNG" src={Avatar} className={styles.avatar} />
+            <div className={styles.icons}>
+              <SocialIcons />
+            </div>
+            <div className={styles.intro}>
+              <Typography variant="h6">Hello World! I'm</Typography>
+              <Typography variant="h2">
+                De Jong <span style={{ color: '#393e46' }}>Yeong</span>
+              </Typography>
+              <div className={styles.description}>
+                <Typography variant="body1">
+                  A Postgraduate Researcher, Software Developer based in
+                  Ireland. Passionate about building{' '}
+                  <strong style={{ color: '#2e585d' }}>
+                    Web &amp; Mobile Applications
+                  </strong>{' '}
+                  and{' '}
+                  <strong style={{ color: '#2e585d' }}>
+                    Artificial Intelligence
+                  </strong>{' '}
+                  especially in the field of Natural Language Processing &amp;
+                  Autonomous Vehicles
+                </Typography>
+              </div>
+              <div className={styles.buttonWrapper}>
+                <HeroButton profile="View More" contact="Resume"></HeroButton>
+              </div>
             </div>
           </div>
         </div>
