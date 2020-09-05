@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   description: {
-    width: '80%',
+    width: '75%',
     height: 'auto',
     margin: '1% auto 2% auto',
     lineHeight: '1.5rem',
