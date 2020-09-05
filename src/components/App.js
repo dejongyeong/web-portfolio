@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from './Hero';
+import MenuBar from './MenuBar';
 
 import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 
@@ -30,6 +31,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="app">
+        <MenuBar />
         <Hero />
         <Hero />
       </div>
