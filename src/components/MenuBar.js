@@ -30,7 +30,10 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionMobile: {
     display: 'flex',
-    [theme.breakpoints.up('md')]: {
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    flexGrow: 1,
+    [theme.breakpoints.up('lg')]: {
       display: 'none',
     },
   },
@@ -74,7 +77,7 @@ function MenuBar(props) {
             <MenuItems />
             <div className={classes.sectionMobile}>
               <IconButton
-                edge="start"
+                edge="end"
                 className={classes.menuButton}
                 color="inherit"
                 aria-label="menu"

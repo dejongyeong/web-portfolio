@@ -160,7 +160,7 @@ function Hero() {
                 </Typography>
               </div>
               <div className={styles.buttonWrapper}>
-                <HeroButton profile="View More" contact="Resume"></HeroButton>
+                <HeroButton profile="View More" contact="Résumé"></HeroButton>
               </div>
             </div>
           </div>
