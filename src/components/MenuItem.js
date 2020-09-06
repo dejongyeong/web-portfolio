@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // tutorial: https://codepen.io/brunob182/pen/rWxYmW
 // initially tried react useStyle hook, but failed. Styled components as alternative
 const MenuItems = styled.a`
-  margin-left: 4%;
+  margin-left: 3%;
   text-decoration: none;
   color: #2e585d;
   position: relative;

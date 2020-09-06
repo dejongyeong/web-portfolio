@@ -1,24 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
   Typography,
-  Button,
-  IconButton,
   useScrollTrigger,
 } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
 import PropTypes from 'prop-types';
 
 import MenuItems from './MenuItem';
+import MobileMenu from './MobileMenu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(1),
   },
   title: {
     flexGrow: 0,
@@ -76,14 +71,7 @@ function MenuBar(props) {
             </Typography>
             <MenuItems />
             <div className={classes.sectionMobile}>
-              <IconButton
-                edge="end"
-                className={classes.menuButton}
-                color="inherit"
-                aria-label="menu"
-              >
-                <MenuIcon />
-              </IconButton>
+              <MobileMenu />
             </div>
           </Toolbar>
         </AppBar>
