@@ -17,9 +17,13 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translate(-50%,-50%)',
     width: '100vw',
     height: '100vh',
+    [theme.breakpoints.down('md')]: {
+      height: '140vh',
+      width: '140vw',
+    },
     [theme.breakpoints.down('sm')]: {
-      height: '120vh',
-      width: '120vw',
+      height: '165vh',
+      width: '165vw',
     },
   },
   main: {
@@ -28,8 +32,11 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     display: 'flex',
     justifyContent: 'center',
+    [theme.breakpoints.down('md')]: {
+      height: '140vh',
+    },
     [theme.breakpoints.down('sm')]: {
-      height: '120vh',
+      height: '165vh',
     },
   },
   content: {
