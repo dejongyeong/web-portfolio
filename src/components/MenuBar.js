@@ -11,19 +11,28 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import PropTypes from 'prop-types';
 
+import MenuItems from './MenuItem';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(0),
+    marginRight: theme.spacing(1),
   },
   title: {
-    flexGrow: 1,
+    flexGrow: 0,
     letterSpacing: '0.15rem',
     fontFamily: 'Lato, sans-serif',
     fontWeight: '400',
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(2),
+    fontSize: '1.4rem',
+  },
+  sectionMobile: {
+    display: 'flex',
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
   },
 }));
 
@@ -62,14 +71,17 @@ function MenuBar(props) {
             <Typography variant="h6" className={classes.title}>
               DJ
             </Typography>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
+            <MenuItems />
+            <div className={classes.sectionMobile}>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+              >
+                <MenuIcon />
+              </IconButton>
+            </div>
           </Toolbar>
         </AppBar>
       </MenuTransparentScroll>
