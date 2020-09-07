@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
@@ -58,6 +58,7 @@ MenuTransparentScroll.propTypes = {
   window: PropTypes.func,
 };
 
+// hash link from: https://github.com/rafgraph/react-router-hash-link.git
 function MenuBar(props) {
   const classes = useStyles();
 

@@ -63,8 +63,8 @@ function MenuItem() {
 
   return (
     <div className={classes.sectionDesktop}>
-      <MenuItems href="/" active>
-        <Typography variant="h6">Home</Typography>
+      <MenuItems href="/">
+        <Typography variant="h6">About</Typography>
       </MenuItems>
       <MenuItems href="/">
         <Typography variant="h6">Portfolio</Typography>

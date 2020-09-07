@@ -10,12 +10,12 @@ import {
   ListItemText,
   IconButton,
 } from '@material-ui/core';
-import { Inbox, Mail, Menu, ChevronRight } from '@material-ui/icons';
+import { Inbox, Mail, Menu } from '@material-ui/icons';
 
 // tutorial from material ui documentation
 const useStyles = makeStyles((theme) => ({
   list: {
-    width: 300,
+    width: 250,
   },
   menuButton: {
     marginRight: theme.spacing(0),
@@ -52,9 +52,6 @@ export default function MobileMenu() {
       onClick={toggleDrawer(anchor, false)}
     >
       <List className={classes.items}>
-        <IconButton onClick={toggleDrawer(anchor, false)}>
-          <ChevronRight />
-        </IconButton>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
