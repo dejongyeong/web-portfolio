@@ -7,6 +7,14 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { makeStyles, Grid } from '@material-ui/core';
 
+// assume both medias and mediasIcon are in same order - could this be modify as a map??
+const medias = [
+  'https://github.com/dejongyeong',
+  'https://www.linkedin.com/in/de-jong-yeong/',
+  'https://orcid.org/0000-0002-4626-8040',
+];
+const mediasIcon = [faGithubSquare, faLinkedin, faOrcid];
+
 const useStyles = makeStyles((theme) => ({
   social: {
     textAlign: 'center',
@@ -25,21 +33,13 @@ export default function SocialIcons() {
   return (
     <div className={styles.social}>
       <Grid container justify="center" spacing={3} alignItems="center">
-        <Grid item xs={3}>
-          <a href="https://github.com/dejongyeong" target="blank">
-            <FontAwesomeIcon icon={faGithubSquare} size="lg" swapOpacity />
-          </a>
-        </Grid>
-        <Grid item xs={3}>
-          <a href="https://www.linkedin.com/in/de-jong-yeong/" target="blank">
-            <FontAwesomeIcon icon={faLinkedin} size="lg" />
-          </a>
-        </Grid>
-        <Grid item xs={3}>
-          <a href="https://orcid.org/0000-0002-4626-8040" target="blank">
-            <FontAwesomeIcon icon={faOrcid} size="lg" />
-          </a>
-        </Grid>
+        {medias.map((text, index) => (
+          <Grid item xs={3}>
+            <a href={text} target="blank">
+              <FontAwesomeIcon icon={mediasIcon[index]} size="lg" swapOpacity />
+            </a>
+          </Grid>
+        ))}
       </Grid>
     </div>
   );
