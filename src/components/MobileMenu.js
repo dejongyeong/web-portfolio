@@ -10,7 +10,7 @@ import {
   ListItemText,
   IconButton,
 } from '@material-ui/core';
-import { Inbox, Mail, Menu } from '@material-ui/icons';
+import { Inbox, Mail, Menu, Close } from '@material-ui/icons';
 
 // tutorial from material ui documentation
 const useStyles = makeStyles((theme) => ({
@@ -52,6 +52,15 @@ export default function MobileMenu() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+      <div style={{ textAlign: 'right', backgroundColor: '#eeeeee' }}>
+        <IconButton
+          style={{ color: '#2e585d' }}
+          onClick={toggleDrawer(anchor, false)}
+        >
+          <Close />
+        </IconButton>
+      </div>
+      <Divider />
       <List className={classes.items}>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
@@ -79,9 +88,6 @@ export default function MobileMenu() {
   return (
     <div>
       <React.Fragment key={anchor}>
-        {/* <Button onClick={toggleDrawer(anchor, true)}>
-          <MenuIcon />
-        </Button> */}
         <IconButton
           edge="end"
           className={classes.menuButton}
@@ -98,6 +104,7 @@ export default function MobileMenu() {
           onOpen={toggleDrawer(anchor, true)}
           disableBackdropTransition={!iOS}
           disableDiscovery={iOS}
+          variant="persistent" //issue of findDomNode deprecated in StrictMode: https://stackoverflow.com/questions/61220424/material-ui-drawer-finddomnode-is-deprecated-in-strictmode
         >
           {mobileMenu}
         </SwipeableDrawer>
