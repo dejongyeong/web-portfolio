@@ -30,7 +30,7 @@ const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
 export default function MobileMenu() {
   const classes = useStyles();
-  const [state, setState] = React.useState(false);
+  const [state, setState] = React.useState({ right: false });
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -50,6 +50,7 @@ export default function MobileMenu() {
       className={clsx(classes.list)}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
     >
       <List className={classes.items}>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
