@@ -52,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
 const anchor = 'right';
 const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-//'Home', 'About', 'Work', 'Experience', 'Contact'
+// prevent browser reload or refresh
+const preventDefault = (event) => event.preventDefault();
 
 export default function MobileMenu(props) {
   const classes = useStyles();
@@ -73,14 +74,14 @@ export default function MobileMenu(props) {
   const mobileMenuList = (
     <List className={classes.items}>
       {props.menus.map((menu) => (
-        <AnchorLink href={menu.link} key={menu.text}>
+        <AnchorLink key={menu.text} href={menu.link} onClick={preventDefault}>
           <ListItem button>
             <ListItemIcon>{menu.icon}</ListItemIcon>
             <ListItemText primary={menu.text} />
           </ListItem>
         </AnchorLink>
       ))}
-      <a href={props.resumeLink} target="blank">
+      <a href={props.resumeLink} target="blank" rel="noopener">
         <ListItem button key="resume">
           <ListItemIcon>
             <ListAlt />

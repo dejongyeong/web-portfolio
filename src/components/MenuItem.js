@@ -62,7 +62,9 @@ const useStyles = makeStyles((theme) => ({
 
 function MenuItem(props) {
   const classes = useStyles();
+  const preventDefault = (event) => event.preventDefault();
 
+  // rel='noopener' - security reason, prevent redirect page to malicious url and ensures running in separate process
   return (
     <div className={classes.sectionDesktop}>
       {props.menus.map((menu) => (
@@ -70,13 +72,13 @@ function MenuItem(props) {
         // anchor link not usable for external link
         // package: https://github.com/mauricevancooten/react-anchor-link-smooth-scroll#readme
         <MenuItems key={menu.text}>
-          <AnchorLink href={menu.link}>
+          <AnchorLink href={menu.link} onClick={preventDefault}>
             <Typography variant="h6">{menu.text}</Typography>
           </AnchorLink>
         </MenuItems>
       ))}
       <MenuItems>
-        <a href={props.resumeLink} target="blank">
+        <a href={props.resumeLink} target="blank" rel="noopener">
           <Typography variant="h6">Résumé</Typography>
         </a>
       </MenuItems>
