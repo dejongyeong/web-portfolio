@@ -11,6 +11,7 @@ import {
   IconButton,
 } from '@material-ui/core';
 import { Inbox, Mail, Menu, Close } from '@material-ui/icons';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 // tutorial from material ui documentation
 const useStyles = makeStyles((theme) => ({
@@ -77,6 +78,11 @@ export default function MobileMenu() {
             <ListItemText primary={text} />
           </ListItem>
         ))}
+        {/* <ListItem button>
+          <AnchorLink href="#contact">
+            <ListItemText variant="h6">Contact</ListItemText>
+          </AnchorLink>
+        </ListItem> */}
       </List>
     </div>
   );
@@ -101,7 +107,10 @@ export default function MobileMenu() {
           onOpen={toggleDrawer(anchor, true)}
           disableBackdropTransition={!iOS}
           disableDiscovery={iOS}
-          variant="persistent" //issue of findDomNode deprecated in StrictMode: https://stackoverflow.com/questions/61220424/material-ui-drawer-finddomnode-is-deprecated-in-strictmode
+          //Error coming from material ui transition component
+          //Issue of findDomNode deprecated in StrictMode: https://stackoverflow.com/questions/61220424/material-ui-drawer-finddomnode-is-deprecated-in-strictmode
+          //Will not see this error in production, could remove variant or remove StrictMode in index.js if not required
+          variant="persistent"
         >
           {mobileMenu}
         </SwipeableDrawer>
