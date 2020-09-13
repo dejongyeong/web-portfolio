@@ -4,13 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
   SwipeableDrawer,
   List,
-  Divider,
   ListItem,
   ListItemIcon,
   ListItemText,
   IconButton,
 } from '@material-ui/core';
-import { Inbox, Mail, Menu, Close } from '@material-ui/icons';
+import { Menu, Close, ListAlt } from '@material-ui/icons';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 // tutorial from material ui documentation
@@ -24,19 +23,38 @@ const useStyles = makeStyles((theme) => ({
   },
   items: {
     backgroundColor: '#eeeeee',
+    '& a': {
+      color: '#2e585d',
+      '& svg': {
+        color: '#2e585d',
+      },
+      textDecoration: 'none',
+      '&:hover': {
+        color: '#00adb5',
+        '& svg': {
+          color: '#00adb5',
+        },
+      },
+      transition: 'color 0.5s ease-in-out',
+      WebkitTransition: 'color 0.5s ease-in-out',
+      MozTransition: 'color 0.5s ease-in-out',
+    },
   },
   closeSection: {
     textAlign: 'right',
   },
   paper: {
     backgroundColor: '#eeeeee',
+    boxShadow: '1px 3px 20px #393e46',
   },
 }));
 
 const anchor = 'right';
 const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-export default function MobileMenu() {
+//'Home', 'About', 'Work', 'Experience', 'Contact'
+
+export default function MobileMenu(props) {
   const classes = useStyles();
   const [state, setState] = React.useState({ right: false });
 
@@ -52,7 +70,27 @@ export default function MobileMenu() {
     setState({ state, [anchor]: open });
   };
 
-  //TODO: Refine here
+  const mobileMenuList = (
+    <List className={classes.items}>
+      {props.menus.map((menu) => (
+        <AnchorLink href={menu.link} key={menu.text}>
+          <ListItem button>
+            <ListItemIcon>{menu.icon}</ListItemIcon>
+            <ListItemText primary={menu.text} />
+          </ListItem>
+        </AnchorLink>
+      ))}
+      <a href={props.resumeLink} target="blank">
+        <ListItem button key="resume">
+          <ListItemIcon>
+            <ListAlt />
+          </ListItemIcon>
+          <ListItemText primary="Résumé" />
+        </ListItem>
+      </a>
+    </List>
+  );
+
   const mobileMenu = (
     <div
       className={clsx(classes.list)}
@@ -68,22 +106,7 @@ export default function MobileMenu() {
           <Close />
         </IconButton>
       </div>
-      <Divider />
-      <List className={classes.items}>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <Inbox /> : <Mail />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-        {/* <ListItem button>
-          <AnchorLink href="#contact">
-            <ListItemText variant="h6">Contact</ListItemText>
-          </AnchorLink>
-        </ListItem> */}
-      </List>
+      {mobileMenuList}
     </div>
   );
 
@@ -110,7 +133,7 @@ export default function MobileMenu() {
           //Error coming from material ui transition component
           //Issue of findDomNode deprecated in StrictMode: https://stackoverflow.com/questions/61220424/material-ui-drawer-finddomnode-is-deprecated-in-strictmode
           //Will not see this error in production, could remove variant or remove StrictMode in index.js if not required
-          variant="persistent"
+          //variant="persistent"
         >
           {mobileMenu}
         </SwipeableDrawer>

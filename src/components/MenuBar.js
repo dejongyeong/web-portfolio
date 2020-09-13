@@ -6,6 +6,7 @@ import {
   Typography,
   useScrollTrigger,
 } from '@material-ui/core';
+import { Mail, Home, Info, Folder, Timeline } from '@material-ui/icons';
 import PropTypes from 'prop-types';
 
 import MenuItems from './MenuItem';
@@ -62,6 +63,15 @@ MenuTransparentScroll.propTypes = {
 function MenuBar(props) {
   const classes = useStyles();
 
+  const menus = [
+    { text: 'Home', link: '#home', icon: <Home /> },
+    { text: 'About', link: '#about', icon: <Info /> },
+    { text: 'Portfolio', link: '#portfolio', icon: <Folder /> },
+    { text: 'Experience', link: '#experience', icon: <Timeline /> },
+    { text: 'Contact', link: '#contact', icon: <Mail /> },
+  ];
+  const resumeLink = 'https://github.com/dejongyeong';
+
   return (
     <div id="menu-bar">
       <MenuTransparentScroll {...props}>
@@ -70,9 +80,9 @@ function MenuBar(props) {
             <Typography variant="h6" className={classes.title}>
               DJ
             </Typography>
-            <MenuItems />
+            <MenuItems menus={menus} resumeLink={resumeLink} />
             <div className={classes.sectionMobile}>
-              <MobileMenu />
+              <MobileMenu menus={menus} resumeLink={resumeLink} />
             </div>
           </Toolbar>
         </AppBar>

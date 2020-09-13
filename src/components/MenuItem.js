@@ -60,25 +60,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function MenuItem() {
+function MenuItem(props) {
   const classes = useStyles();
-  const menu = ['Home', 'About', 'Portfolio', 'Experience', 'Contact'];
-  const resumeLink = 'https://github.com/dejongyeong';
 
   return (
     <div className={classes.sectionDesktop}>
-      {menu.map((text, index) => (
+      {props.menus.map((menu) => (
         // key is required for react!!
         // anchor link not usable for external link
         // package: https://github.com/mauricevancooten/react-anchor-link-smooth-scroll#readme
-        <MenuItems key={text}>
-          <AnchorLink href={'#'.concat(text.toLocaleLowerCase())}>
-            <Typography variant="h6">{text}</Typography>
+        <MenuItems key={menu.text}>
+          <AnchorLink href={menu.link}>
+            <Typography variant="h6">{menu.text}</Typography>
           </AnchorLink>
         </MenuItems>
       ))}
       <MenuItems>
-        <a href={resumeLink} target="blank">
+        <a href={props.resumeLink} target="blank">
           <Typography variant="h6">Résumé</Typography>
         </a>
       </MenuItems>
