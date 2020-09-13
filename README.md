@@ -52,6 +52,7 @@ Initial research was conducted before selecting which framework to use, e.g. siz
 **Future Work**
 
 - [ ] ESLint and/or Prettier integration in future portfolio
+- [ ] Further research on responsiveness best practices, e.g. images, typography etc.
 
 \
 \
