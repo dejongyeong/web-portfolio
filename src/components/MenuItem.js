@@ -78,7 +78,7 @@ function MenuItem(props) {
         </MenuItems>
       ))}
       <MenuItems>
-        <a href={props.resumeLink} target="blank" rel="noopener">
+        <a href={props.resumeLink} target="_blank" rel="noopener noreferrer">
           <Typography variant="h6">Résumé</Typography>
         </a>
       </MenuItems>

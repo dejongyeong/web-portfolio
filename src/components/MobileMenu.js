@@ -81,7 +81,7 @@ export default function MobileMenu(props) {
           </ListItem>
         </AnchorLink>
       ))}
-      <a href={props.resumeLink} target="blank" rel="noopener">
+      <a href={props.resumeLink} target="_blank" rel="noopener noreferrer">
         <ListItem button key="resume">
           <ListItemIcon>
             <ListAlt />
