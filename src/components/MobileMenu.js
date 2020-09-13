@@ -74,7 +74,12 @@ export default function MobileMenu(props) {
   const mobileMenuList = (
     <List className={classes.items}>
       {props.menus.map((menu) => (
-        <AnchorLink key={menu.text} href={menu.link} onClick={preventDefault}>
+        <AnchorLink
+          key={menu.text}
+          href={menu.link}
+          onClick={preventDefault}
+          offset={() => 80}
+        >
           <ListItem button>
             <ListItemIcon>{menu.icon}</ListItemIcon>
             <ListItemText primary={menu.text} />

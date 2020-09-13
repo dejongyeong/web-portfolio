@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
 import MenuBar from './MenuBar';
+import About from './About';
 
 import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 
@@ -36,7 +37,7 @@ function App() {
           <Hero />
         </section>
         <section id="about">
-          <Hero />
+          <About />
         </section>
         <section id="portfolio">
           <Hero />

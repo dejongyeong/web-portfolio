@@ -72,7 +72,11 @@ function MenuItem(props) {
         // anchor link not usable for external link
         // package: https://github.com/mauricevancooten/react-anchor-link-smooth-scroll#readme
         <MenuItems key={menu.text}>
-          <AnchorLink href={menu.link} onClick={preventDefault}>
+          <AnchorLink
+            href={menu.link}
+            onClick={preventDefault}
+            offset={() => 90}
+          >
             <Typography variant="h6">{menu.text}</Typography>
           </AnchorLink>
         </MenuItems>

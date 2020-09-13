@@ -147,16 +147,16 @@ function Hero() {
               <div className={styles.description}>
                 <Typography variant="body1">
                   A Postgraduate Researcher, Software Developer based in
-                  Ireland. Passionate about building{' '}
+                  Ireland. Passionate about building modern{' '}
                   <strong style={{ color: '#2e585d' }}>
                     Web &amp; Mobile Applications
                   </strong>{' '}
-                  and{' '}
+                  as well as{' '}
                   <strong style={{ color: '#2e585d' }}>
                     Artificial Intelligence
                   </strong>{' '}
                   especially in the field of Natural Language Processing &amp;
-                  Autonomous Vehicles
+                  Autonomous Vehicles.
                 </Typography>
               </div>
               <div className={styles.buttonWrapper}>
