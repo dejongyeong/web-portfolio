@@ -119,7 +119,7 @@ function Hero() {
   const styles = useStyles();
 
   return (
-    <div id="home">
+    <div>
       <Parallax
         bgImage={Backdrop}
         strength={200}

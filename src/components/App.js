@@ -32,8 +32,21 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="app">
         <MenuBar />
-        <Hero />
-        <Hero />
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="about">
+          <Hero />
+        </section>
+        <section id="portfolio">
+          <Hero />
+        </section>
+        <section id="experience">
+          <Hero />
+        </section>
+        <section id="contact">
+          <Hero />
+        </section>
       </div>
     </ThemeProvider>
   );

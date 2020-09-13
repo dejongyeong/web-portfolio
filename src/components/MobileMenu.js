@@ -16,11 +16,18 @@ import { Inbox, Mail, Menu, Close } from '@material-ui/icons';
 const useStyles = makeStyles((theme) => ({
   list: {
     width: 250,
+    backgroundColor: '#eeeeee',
   },
   menuButton: {
     marginRight: theme.spacing(0),
   },
   items: {
+    backgroundColor: '#eeeeee',
+  },
+  closeSection: {
+    textAlign: 'right',
+  },
+  paper: {
     backgroundColor: '#eeeeee',
   },
 }));
@@ -52,7 +59,7 @@ export default function MobileMenu() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <div style={{ textAlign: 'right', backgroundColor: '#eeeeee' }}>
+      <div className={classes.closeSection}>
         <IconButton
           style={{ color: '#2e585d' }}
           onClick={toggleDrawer(anchor, false)}
@@ -63,17 +70,6 @@ export default function MobileMenu() {
       <Divider />
       <List className={classes.items}>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <Inbox /> : <Mail />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <Inbox /> : <Mail />}
@@ -98,6 +94,7 @@ export default function MobileMenu() {
           <Menu />
         </IconButton>
         <SwipeableDrawer
+          classes={{ paper: classes.paper }}
           anchor={anchor}
           open={state[anchor]}
           onClose={toggleDrawer(anchor, false)}
