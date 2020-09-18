@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '3% auto 0 auto',
     '& h3': {
       paddingTop: '3%',
-      paddingBottom: '2%',
+      paddingBottom: '1.5%',
       color: '#2e585d',
       fontWeight: '600',
       letterSpacing: '3px',
@@ -29,10 +29,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   describe: {
-    margin: '2% auto',
+    margin: '1% auto 2% auto',
     '& p': {
       lineHeight: '1.9rem',
-      fontSize: '1.02rem',
+      fontSize: '1.1rem',
       fontFamily: 'Lato, sans-serif',
       color: '#393e46',
       fontWeight: '400',
@@ -63,9 +63,9 @@ const useStyles = makeStyles((theme) => ({
     width: '70%',
   },
   paper: {
-    border: '1px solid rgb(182 211 213)',
+    // border: '1px solid rgb(182 211 213)',
     height: '400px',
-    boxShadow: '1px 1px 3px rgb(182 211 213)',
+    //boxShadow: '1px 1px 3px #393e46',
     borderRadius: '0',
   },
   '@keyframes aboutEffect': {
@@ -76,7 +76,6 @@ const useStyles = makeStyles((theme) => ({
 
 function About() {
   const classes = useStyles();
-
   const description = (
     <Typography variant="body1">
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -103,30 +102,17 @@ function About() {
           <div className={classes.paperWrap}>
             <Grid container className={classes.root} spacing={3}>
               <Grid item lg={4} xs={12}>
-                <Paper
-                  variant="outlined"
-                  className={classes.paper}
-                  square={false}
-                >
+                <Paper elevation={3} className={classes.paper} square={false}>
                   xs=4
                 </Paper>
               </Grid>
               <Grid item lg={4} xs={12}>
-                <Paper
-                  variant="outlined"
-                  square={false}
-                  className={classes.paper}
-                >
+                <Paper square={false} elevation={3} className={classes.paper}>
                   xs=4
                 </Paper>
               </Grid>
               <Grid item lg={4} xs={12}>
-                <Paper
-                  variant="outlined"
-                  square={false}
-                  elevation={2}
-                  className={classes.paper}
-                >
+                <Paper square={false} elevation={3} className={classes.paper}>
                   xs=4
                 </Paper>
               </Grid>
