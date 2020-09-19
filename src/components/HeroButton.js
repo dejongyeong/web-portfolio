@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, withStyles, Button } from '@material-ui/core';
+import { makeStyles, withStyles, Button, Grid } from '@material-ui/core';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
+const resumeLink = 'https://github.com/dejongyeong';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-      '& button:nth-child(2)': {
-        marginTop: '3%',
-      },
+    '& a': {
+      textDecoration: 'none',
     },
   },
 }));
@@ -19,9 +19,8 @@ const useStyles = makeStyles((theme) => ({
 const StyledButton = withStyles({
   root: {
     backgroundColor: 'transparent',
-    marginRight: '3%',
     width: '200px',
-    borderRadius: '10px',
+    borderRadius: '30px',
     boxSizing: 'border-box',
     fontFamily: 'Montserrat, sans-serif',
     border: '2px solid #2E585B',
@@ -43,11 +42,28 @@ const StyledButton = withStyles({
 
 function HeroButton(props) {
   const styles = useStyles();
+  const preventDefault = (event) => event.preventDefault();
 
   return (
     <div className={styles.wrapper}>
-      <StyledButton>{props.profile}</StyledButton>
-      <StyledButton>{props.contact}</StyledButton>
+      <Grid
+        container
+        justify="center"
+        spacing={2}
+        alignItems="center"
+        direction="row"
+      >
+        <Grid item xs={12} lg={6}>
+          <AnchorLink href="#about" onClick={preventDefault} offset={() => 90}>
+            <StyledButton>{props.profile}</StyledButton>
+          </AnchorLink>
+        </Grid>
+        <Grid item xs={12} lg={6}>
+          <a href={resumeLink} target="_blank" rel="noopener noreferrer">
+            <StyledButton>{props.contact}</StyledButton>
+          </a>
+        </Grid>
+      </Grid>
     </div>
   );
 }

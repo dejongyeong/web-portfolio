@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw',
     height: '100vh',
     [theme.breakpoints.down('md')]: {
-      height: '140vh',
-      width: '140vw',
+      height: '137vh',
+      width: '137vw',
     },
     [theme.breakpoints.down('sm')]: {
       height: '165vh',
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
-      height: '140vh',
+      height: '137vh',
     },
     [theme.breakpoints.down('sm')]: {
       height: '165vh',
@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '50%',
+    width: '100%',
     height: 'auto',
     margin: '2% auto 0 auto',
   },

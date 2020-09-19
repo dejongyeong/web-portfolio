@@ -1,11 +1,7 @@
 import { Grid, makeStyles, Tooltip, Typography } from '@material-ui/core';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faCogs,
-  faBrain,
-  faEllipsisH,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCogs, faBrain, faTools } from '@fortawesome/free-solid-svg-icons';
 
 // constant content
 const contents = [
@@ -31,10 +27,10 @@ const contents = [
   },
   {
     title: 'Software Tools',
-    icons: faEllipsisH,
+    icons: faTools,
     skillList: ['VS Code', 'Figma'],
     isTip: true,
-    tipText: 'Experience With',
+    tipText: 'Familiar With',
   },
 ];
 
