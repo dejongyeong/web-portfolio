@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { Grid, makeStyles, Tooltip, Typography } from '@material-ui/core';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,18 +13,39 @@ const contents = [
     title: 'Technical Skills',
     icons: faCogs,
     skillList: ['Python', 'Java', 'C#', 'PHP', 'SQL Database', 'NoSQL'],
+    isTip: true,
+    tipText: 'In Approximate Order of Proficiency',
   },
   {
     title: 'Soft Skills',
     icons: faBrain,
-    skillList: ['Time Management', 'Problem-Solving'],
+    skillList: [
+      'Time Management',
+      'Problem-Solving',
+      'Research',
+      'Self-Motivated',
+      'Personable',
+      'Creative',
+    ],
+    isTip: false,
   },
-  { title: 'Others', icons: faEllipsisH, skillList: ['Figma'] },
+  {
+    title: 'Software Tools',
+    icons: faEllipsisH,
+    skillList: ['VS Code', 'Figma'],
+    isTip: true,
+    tipText: 'Experience With',
+  },
 ];
 
 const useStyle = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  skillWrap: {
+    display: 'block',
+    textAlign: 'center',
+    margin: '0 auto',
   },
   paperWrap: {
     width: '100%',
@@ -33,18 +54,19 @@ const useStyle = makeStyles((theme) => ({
   paper: {
     display: 'flex',
     justifyContent: 'center',
-    margin: '0 auto 5% auto',
+    margin: '0 auto 7.5% auto',
     [theme.breakpoints.down('lg')]: {
       margin: '0 auto 13% auto',
     },
   },
   aboutIcons: {
-    width: '175px',
-    paddingBottom: '175px',
+    width: '165px',
+    paddingBottom: '165px',
     borderRadius: '50%',
     backgroundColor: '#2e5b5d',
     position: 'relative',
     color: '#ffffff',
+    margin: '0 auto',
   },
   iconsContent: {
     position: 'absolute',
@@ -86,15 +108,23 @@ function Skills() {
             key={content.title}
             className={classes.paper}
           >
-            <div style={{ display: 'block' }}>
+            <div className={classes.skillWrap}>
               <div className={classes.aboutIcons}>
                 <div className={classes.iconsContent}>
                   <FontAwesomeIcon icon={content.icons} size="3x" />
                 </div>
               </div>
-              <Typography variant="h6" className={classes.skillsTitle}>
-                {content.title}
-              </Typography>
+              {content.isTip ? (
+                <Tooltip title={content.tipText} arrow placement="right">
+                  <Typography variant="h6" className={classes.skillsTitle}>
+                    {content.title}
+                  </Typography>
+                </Tooltip>
+              ) : (
+                <Typography variant="h6" className={classes.skillsTitle}>
+                  {content.title}
+                </Typography>
+              )}
               <div className={classes.skillsContent}>
                 {content.skillList.map((skill) => (
                   <Typography variant="body1" key={skill}>

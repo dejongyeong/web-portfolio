@@ -21,7 +21,7 @@ const StyledButton = withStyles({
     backgroundColor: 'transparent',
     marginRight: '3%',
     width: '200px',
-    borderRadius: '0',
+    borderRadius: '10px',
     boxSizing: 'border-box',
     fontFamily: 'Montserrat, sans-serif',
     border: '2px solid #2E585B',
