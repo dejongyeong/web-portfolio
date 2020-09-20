@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Tooltip, Typography } from '@material-ui/core';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs, faBrain, faTools } from '@fortawesome/free-solid-svg-icons';
@@ -6,31 +6,60 @@ import { faCogs, faBrain, faTools } from '@fortawesome/free-solid-svg-icons';
 // constant content
 const contents = [
   {
+    key: 1,
     title: 'Technical Skills',
     icons: faCogs,
-    skillList: ['Python', 'Java', 'C#', 'PHP', 'SQL Database', 'NoSQL'],
-    isTip: true,
-    tipText: 'In Approximate Order of Proficiency',
+    skillList: [
+      'Python',
+      'HTML / CSS / SCSS',
+      'Java',
+      'JavaScript',
+      'Bootstrap / Material UI',
+      'ROS Framework / C++',
+      'C#',
+      'MongoDB',
+      'MySQL / PostgreSQL',
+      'PHP Laravel 5',
+    ],
+    tipText: 'in approximate order of proficiency',
+    isSubtitle: true,
   },
   {
+    key: 2,
     title: 'Soft Skills',
     icons: faBrain,
     skillList: [
       'Time Management',
-      'Problem-Solving',
-      'Research',
+      'Prioritizing',
+      'Problem Solving',
+      'Teamwork/Collaboration',
       'Self-Motivated',
       'Personable',
+      'Attention to Detail',
+      'Communication',
       'Creative',
+      'Analytical',
     ],
-    isTip: false,
+    isSubtitle: false,
   },
   {
+    key: 3,
     title: 'Software Tools',
     icons: faTools,
-    skillList: ['VS Code', 'Figma'],
-    isTip: true,
-    tipText: 'Familiar With',
+    skillList: [
+      'Git / GitHub',
+      'IntelliJ IDEA',
+      'PyCharm IDE',
+      'Visual Studio',
+      'VS Code',
+      'Trello',
+      'Slack',
+      'Figma',
+      'Heroku',
+      'Travis CI',
+    ],
+    tipText: 'experience with',
+    isSubtitle: true,
   },
 ];
 
@@ -72,7 +101,7 @@ const useStyle = makeStyles((theme) => ({
     textAlign: 'center',
   },
   skillsTitle: {
-    margin: '15% auto 6% auto',
+    margin: '15% auto 0 auto',
     color: '#2e585b',
     fontSize: '1rem',
     fontFamily: 'Lato, san-serif',
@@ -82,13 +111,51 @@ const useStyle = makeStyles((theme) => ({
   skillsContent: {
     '& p': {
       color: '#222831',
-      fontSize: '1rem',
+      fontSize: '0.99rem',
       textAlign: 'center',
-      fontFamily: 'Montserrat, sans-serif',
+      fontFamily: 'Lato, sans-serif',
       lineHeight: '1.7rem',
     },
   },
+  subtitle: {
+    margin: '0 auto 8% auto',
+    '& p': {
+      fontSize: '0.8rem',
+      color: '#00adb5',
+      textTransform: 'lowercase',
+    },
+  },
 }));
+
+// subtitle
+function Subtitle(props) {
+  return (
+    <>
+      {props.content.isSubtitle ? (
+        <div className={props.classes.subtitle}>
+          <Typography variant="body1">{props.content.tipText}</Typography>
+        </div>
+      ) : (
+        <div className={props.classes.subtitle}>
+          <Typography variant="body1">&nbsp;</Typography>
+        </div>
+      )}
+    </>
+  );
+}
+
+// skill listing
+function SkillLists(props) {
+  return (
+    <>
+      {props.content.skillList.map((skill) => (
+        <Typography variant="body1" key={skill}>
+          {skill}
+        </Typography>
+      ))}
+    </>
+  );
+}
 
 function Skills() {
   const classes = useStyle();
@@ -97,36 +164,19 @@ function Skills() {
     <div className={classes.paperWrap}>
       <Grid container className={classes.root} spacing={0}>
         {contents.map((content) => (
-          <Grid
-            item
-            xs={12}
-            xl={4}
-            key={content.title}
-            className={classes.paper}
-          >
+          <Grid item xs={12} xl={4} key={content.key} className={classes.paper}>
             <div className={classes.skillWrap}>
               <div className={classes.aboutIcons}>
                 <div className={classes.iconsContent}>
                   <FontAwesomeIcon icon={content.icons} size="3x" />
                 </div>
               </div>
-              {content.isTip ? (
-                <Tooltip title={content.tipText} arrow placement="right">
-                  <Typography variant="h6" className={classes.skillsTitle}>
-                    {content.title}
-                  </Typography>
-                </Tooltip>
-              ) : (
-                <Typography variant="h6" className={classes.skillsTitle}>
-                  {content.title}
-                </Typography>
-              )}
+              <Typography variant="h6" className={classes.skillsTitle}>
+                {content.title}
+              </Typography>
+              <Subtitle content={content} classes={classes} />
               <div className={classes.skillsContent}>
-                {content.skillList.map((skill) => (
-                  <Typography variant="body1" key={skill}>
-                    {skill}
-                  </Typography>
-                ))}
+                <SkillLists content={content} />
               </div>
             </div>
           </Grid>

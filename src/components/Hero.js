@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
       color: '#222831',
       fontSize: '1.05rem',
       fontWeight: 'normal',
-      fontFamily: 'Lato, sans-serif',
+      fontFamily: 'Montserrat, sans-serif',
     },
     [theme.breakpoints.down('md')]: {
       margin: '3.5% auto 6% auto',
@@ -146,8 +146,8 @@ function Hero() {
               </Typography>
               <div className={styles.description}>
                 <Typography variant="body1">
-                  A Postgraduate Researcher, Software Developer based in
-                  Ireland. Passionate about building modern{' '}
+                  An aspiring Postgraduate Researcher, Software Developer based
+                  in Ireland. Passionate about building modern{' '}
                   <strong style={{ color: '#2e585d' }}>
                     Web &amp; Mobile Applications
                   </strong>{' '}

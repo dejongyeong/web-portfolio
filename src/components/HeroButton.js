@@ -32,7 +32,6 @@ const StyledButton = withStyles({
       backgroundColor: '#2e585d',
       borderColor: '#2e585d',
       color: '#ffffff',
-      boxShadow: '2px 2px 1px 0.2rem rgba(57, 62, 70, 0.1)',
     },
     transition: 'background-color 0.5s ease-in-out',
     WebkitTransition: 'background-color 0.5s ease-in-out',
