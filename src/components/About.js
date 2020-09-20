@@ -41,15 +41,15 @@ const useStyles = makeStyles((theme) => ({
       color: '#2e585d',
       fontWeight: '600',
       letterSpacing: '3px',
-      [theme.breakpoints.up('xl')]: {
-        animation: `$aboutEffect 2000ms ${theme.transitions.easing.easeInOut}`,
-      },
+      // [theme.breakpoints.up('xl')]: {
+      //   animation: `$aboutEffect 2000ms ${theme.transitions.easing.easeInOut}`,
+      // },
     },
   },
-  '@keyframes aboutEffect': {
-    '0%': { transform: 'translate3d(0, -50px, 0)' },
-    '100%': { transform: 'translate3d(0, 0, 0)' },
-  },
+  // '@keyframes aboutEffect': {
+  //   '0%': { transform: 'translate3d(0, -50px, 0)' },
+  //   '100%': { transform: 'translate3d(0, 0, 0)' },
+  // },
   describe: {
     margin: '1% auto 2% auto',
     '& p': {
@@ -64,9 +64,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '3%',
     [theme.breakpoints.down('xl')]: {
-      marginTop: '8%',
+      marginTop: '4%',
       marginBottom: '8%',
     },
     [theme.breakpoints.down('md')]: {

@@ -79,9 +79,9 @@ const useStyle = makeStyles((theme) => ({
   paper: {
     display: 'flex',
     justifyContent: 'center',
-    margin: '0 auto 7.5% auto',
+    margin: '0 auto',
     [theme.breakpoints.down('lg')]: {
-      margin: '0 auto 13% auto',
+      margin: '0 auto 9% auto',
     },
   },
   aboutIcons: {
