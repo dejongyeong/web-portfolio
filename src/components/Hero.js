@@ -98,8 +98,9 @@ const useStyles = makeStyles((theme) => ({
     '& p': {
       color: '#222831',
       fontSize: '1.05rem',
-      fontWeight: 'normal',
+      fontWeight: '500',
       fontFamily: 'Montserrat, sans-serif',
+      marginBottom: '3.5%',
     },
     [theme.breakpoints.down('md')]: {
       margin: '3.5% auto 6% auto',

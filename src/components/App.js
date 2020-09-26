@@ -71,7 +71,7 @@ function App() {
           scrollTrigger: {
             id: `section-${index + 1}`,
             trigger: element,
-            start: 'top center',
+            start: 'top 70%', // when top of the trigger hits 70% up from the bottom of the viewport
             toggleActions: 'play none none',
           },
         }

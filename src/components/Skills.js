@@ -1,7 +1,12 @@
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCogs, faBrain, faTools } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCogs,
+  faBrain,
+  faTools,
+  faGlobe,
+} from '@fortawesome/free-solid-svg-icons';
 
 // constant content
 const contents = [
@@ -11,39 +16,21 @@ const contents = [
     icons: faCogs,
     skillList: [
       'Python',
-      'HTML / CSS / SCSS',
+      'HTML • CSS • SCSS',
       'Java',
       'JavaScript',
-      'Bootstrap / Material UI',
-      'ROS Framework / C++',
+      'Bootstrap 4',
+      'Material UI',
+      'SQL • NoSQL',
       'C#',
-      'MongoDB',
-      'MySQL / PostgreSQL',
       'PHP Laravel 5',
+      'ROS • C++',
     ],
-    tipText: 'in approximate order of proficiency',
+    tipText: 'expertise in approx. order',
     isSubtitle: true,
   },
   {
     key: 2,
-    title: 'Soft Skills',
-    icons: faBrain,
-    skillList: [
-      'Time Management',
-      'Prioritizing',
-      'Problem Solving',
-      'Teamwork/Collaboration',
-      'Self-Motivated',
-      'Personable',
-      'Attention to Detail',
-      'Communication',
-      'Creative',
-      'Analytical',
-    ],
-    isSubtitle: false,
-  },
-  {
-    key: 3,
     title: 'Software Tools',
     icons: faTools,
     skillList: [
@@ -58,7 +45,33 @@ const contents = [
       'Heroku',
       'Travis CI',
     ],
-    tipText: 'experience with',
+    tipText: 'experienced with',
+    isSubtitle: true,
+  },
+  {
+    key: 3,
+    title: 'Soft Skills',
+    icons: faBrain,
+    skillList: [
+      'Time Management',
+      'Prioritizing',
+      'Problem Solving',
+      'Teamwork',
+      'Self-Motivated',
+      'Personable',
+      'Attention to Detail',
+      'Communication',
+      'Creative',
+      'Analytical',
+    ],
+    isSubtitle: false,
+  },
+  {
+    key: 4,
+    title: 'Languages',
+    icons: faGlobe,
+    skillList: ['Mandarin', 'English', 'Cantonese', 'Malaysian Malay'],
+    tipText: 'in order of proficiency',
     isSubtitle: true,
   },
 ];
@@ -79,14 +92,14 @@ const useStyle = makeStyles((theme) => ({
   paper: {
     display: 'flex',
     justifyContent: 'center',
-    margin: '0 auto',
+    margin: '0 auto 2.5% auto',
     [theme.breakpoints.down('lg')]: {
       margin: '0 auto 9% auto',
     },
   },
   aboutIcons: {
-    width: '165px',
-    paddingBottom: '165px',
+    width: '140px',
+    paddingBottom: '140px',
     borderRadius: '50%',
     backgroundColor: '#2e5b5d',
     position: 'relative',
@@ -111,10 +124,11 @@ const useStyle = makeStyles((theme) => ({
   skillsContent: {
     '& p': {
       color: '#222831',
-      fontSize: '0.99rem',
+      fontSize: '0.88rem',
       textAlign: 'center',
-      fontFamily: 'Lato, sans-serif',
-      lineHeight: '1.7rem',
+      fontFamily: 'Montserrat, sans-serif',
+      lineHeight: '1.75rem',
+      fontWeight: '400',
     },
   },
   subtitle: {
@@ -162,9 +176,16 @@ function Skills() {
 
   return (
     <div className={classes.paperWrap}>
-      <Grid container className={classes.root} spacing={0}>
+      <Grid container className={classes.root} spacing={1}>
         {contents.map((content) => (
-          <Grid item xs={12} xl={4} key={content.key} className={classes.paper}>
+          <Grid
+            item
+            xs={12}
+            lg={6}
+            xl={3}
+            key={content.key}
+            className={classes.paper}
+          >
             <div className={classes.skillWrap}>
               <div className={classes.aboutIcons}>
                 <div className={classes.iconsContent}>
