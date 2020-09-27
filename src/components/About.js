@@ -14,12 +14,15 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     '& h3': {
-      paddingTop: '2.5%',
-      paddingBottom: '1%',
+      padding: '1%',
       color: '#2e585d',
       fontWeight: '700',
       letterSpacing: '6px',
       fontFamily: 'Montserrat, sans-serif',
+      [theme.breakpoints.down('sm')]: {
+        margin: '7% 0 3% 0',
+        fontSize: '2.5rem',
+      },
       // [theme.breakpoints.up('xl')]: {
       //   animation: `$aboutEffect 2000ms ${theme.transitions.easing.easeInOut}`,
       // },
@@ -34,8 +37,14 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     textAlign: 'center',
     margin: '2% auto 1.5% auto',
+    [theme.breakpoints.between('767', 'xl')]: {
+      margin: '4% auto 2% auto',
+    },
     [theme.breakpoints.down('lg')]: {
-      margin: '8% auto 2% auto',
+      margin: '6.5% auto 2% auto',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '90%',
     },
     padding: '0 1%',
   },

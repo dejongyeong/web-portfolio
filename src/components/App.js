@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/all';
 import Hero from './Hero';
 import MenuBar from './MenuBar';
 import About from './About';
+import Experience from './Experience';
 
 // gsap animation
 gsap.registerPlugin(ScrollTrigger);
@@ -36,7 +37,7 @@ const theme = createMuiTheme({
 const sections = [
   { key: 1, id: 'about', comp: <About /> },
   { key: 2, id: 'portfolio', comp: <Hero /> },
-  { key: 3, id: 'experience', comp: <Hero /> },
+  { key: 3, id: 'experience', comp: <Experience /> },
   { key: 4, id: 'contact', comp: <Hero /> },
 ];
 
