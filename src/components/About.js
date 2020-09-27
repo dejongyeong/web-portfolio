@@ -140,8 +140,7 @@ function About() {
       <Typography variant="body1">
         When I am not coding or stay in tune with new technologies, I enjoy
         playing chess and online games with friends - a great way to boost
-        teamwork, destress, unwind and keep the mind sharp. Reach out to DJ to
-        connect!
+        teamwork, de-stress, unwind and keep the mind sharp.
       </Typography>
     </>
   );
