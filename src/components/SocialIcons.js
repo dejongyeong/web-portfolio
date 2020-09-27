@@ -31,10 +31,16 @@ export default function SocialIcons() {
 
   return (
     <div className={styles.social}>
-      <Grid container justify="center" spacing={3} alignItems="center">
+      <Grid
+        container
+        justify="center"
+        spacing={3}
+        alignItems="center"
+        direction="row"
+      >
         {links.map((text, index) => (
           // key is required for react!!
-          <Grid item xs={3} key={text}>
+          <Grid item xs={4} key={text}>
             <a href={text} target="blank">
               <FontAwesomeIcon icon={linksIcon[index]} size="lg" swapOpacity />
             </a>

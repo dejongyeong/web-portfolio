@@ -74,7 +74,12 @@ export default function MobileMenu(props) {
   const mobileMenuList = (
     <List className={classes.items}>
       {props.menus.map((menu) => (
-        <AnchorLink key={menu.text} href={menu.link} onClick={preventDefault}>
+        <AnchorLink
+          key={menu.text}
+          href={menu.link}
+          onClick={preventDefault}
+          offset={() => 80}
+        >
           <ListItem button>
             <ListItemIcon>{menu.icon}</ListItemIcon>
             <ListItemText primary={menu.text} />
@@ -134,7 +139,7 @@ export default function MobileMenu(props) {
           //Error coming from material ui transition component
           //Issue of findDomNode deprecated in StrictMode: https://stackoverflow.com/questions/61220424/material-ui-drawer-finddomnode-is-deprecated-in-strictmode
           //Will not see this error in production, could remove variant or remove StrictMode in index.js if not required
-          //variant="persistent"
+          //npm install @material-ui/core@next (v5) will resolve this issue
         >
           {mobileMenu}
         </SwipeableDrawer>

@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw',
     height: '100vh',
     [theme.breakpoints.down('md')]: {
-      height: '140vh',
-      width: '140vw',
+      height: '137vh',
+      width: '137vw',
     },
     [theme.breakpoints.down('sm')]: {
       height: '165vh',
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
-      height: '140vh',
+      height: '137vh',
     },
     [theme.breakpoints.down('sm')]: {
       height: '165vh',
@@ -98,8 +98,9 @@ const useStyles = makeStyles((theme) => ({
     '& p': {
       color: '#222831',
       fontSize: '1.05rem',
-      fontWeight: 'normal',
-      fontFamily: 'Lato, sans-serif',
+      fontWeight: '500',
+      fontFamily: 'Montserrat, sans-serif',
+      marginBottom: '3.5%',
     },
     [theme.breakpoints.down('md')]: {
       margin: '3.5% auto 6% auto',
@@ -109,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '50%',
+    width: '100%',
     height: 'auto',
     margin: '2% auto 0 auto',
   },
@@ -146,17 +147,17 @@ function Hero() {
               </Typography>
               <div className={styles.description}>
                 <Typography variant="body1">
-                  A Postgraduate Researcher, Software Developer based in
-                  Ireland. Passionate about building{' '}
+                  An aspiring Postgraduate Researcher, Software Developer based
+                  in Ireland. Passionate about building modern{' '}
                   <strong style={{ color: '#2e585d' }}>
                     Web &amp; Mobile Applications
                   </strong>{' '}
-                  and{' '}
+                  as well as{' '}
                   <strong style={{ color: '#2e585d' }}>
                     Artificial Intelligence
                   </strong>{' '}
                   especially in the field of Natural Language Processing &amp;
-                  Autonomous Vehicles
+                  Autonomous Vehicles.
                 </Typography>
               </div>
               <div className={styles.buttonWrapper}>
