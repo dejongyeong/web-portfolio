@@ -27,7 +27,6 @@ const contents = [
       'ROS • C++',
     ],
     tipText: 'expertise in approx. order',
-    isSubtitle: true,
   },
   {
     key: 2,
@@ -45,8 +44,7 @@ const contents = [
       'Heroku',
       'Travis CI',
     ],
-    tipText: 'experienced with',
-    isSubtitle: true,
+    tipText: 'experience with',
   },
   {
     key: 3,
@@ -64,7 +62,7 @@ const contents = [
       'Creative',
       'Analytical',
     ],
-    isSubtitle: false,
+    tipText: 'personality traits',
   },
   {
     key: 4,
@@ -72,7 +70,6 @@ const contents = [
     icons: faGlobe,
     skillList: ['Mandarin', 'English', 'Cantonese', 'Malaysian Malay'],
     tipText: 'in order of proficiency',
-    isSubtitle: true,
   },
 ];
 
@@ -92,9 +89,9 @@ const useStyle = makeStyles((theme) => ({
   paper: {
     display: 'flex',
     justifyContent: 'center',
-    margin: '0 auto 2.5% auto',
+    margin: '0 auto',
     [theme.breakpoints.down('lg')]: {
-      margin: '0 auto 9% auto',
+      margin: '0 auto 8% auto',
     },
   },
   aboutIcons: {
@@ -144,17 +141,9 @@ const useStyle = makeStyles((theme) => ({
 // subtitle
 function Subtitle(props) {
   return (
-    <>
-      {props.content.isSubtitle ? (
-        <div className={props.classes.subtitle}>
-          <Typography variant="body1">{props.content.tipText}</Typography>
-        </div>
-      ) : (
-        <div className={props.classes.subtitle}>
-          <Typography variant="body1">&nbsp;</Typography>
-        </div>
-      )}
-    </>
+    <div className={props.classes.subtitle}>
+      <Typography variant="body1">{props.content.tipText}</Typography>
+    </div>
   );
 }
 
@@ -176,7 +165,13 @@ function Skills() {
 
   return (
     <div className={classes.paperWrap}>
-      <Grid container className={classes.root} spacing={1}>
+      <Grid
+        container
+        className={classes.root}
+        spacing={0}
+        justify="space-between"
+        alignItems="flex-start"
+      >
         {contents.map((content) => (
           <Grid
             item
