@@ -19,6 +19,7 @@
     "react-dom": "^16.13.1",
     "react-parallax": "^3.0.3",
     "react-scripts": "3.4.3",
+    "react-uuid": "^1.0.2",
     "react-vertical-timeline-component": "^3.0.2",
     "styled-components": "^5.2.0"
   },

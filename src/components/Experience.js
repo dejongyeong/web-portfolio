@@ -5,31 +5,34 @@ import Timeline from './Timeline';
 
 const useStyles = makeStyles((theme) => ({
   expWrapper: {
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#ffffff',
     height: '100%',
     width: 'auto',
     margin: '0 auto',
     display: 'flex',
   },
   expContainer: {
-    width: '80%',
+    width: '90%',
     [theme.breakpoints.down('md')]: {
-      width: '90%',
+      width: '85%',
     },
     height: '100%',
-    margin: '1% auto 5% auto',
+    margin: '1% auto 4% auto',
     [theme.breakpoints.between('767', 'xl')]: {
       margin: '4% auto 2% auto',
     },
     [theme.breakpoints.down('lg')]: {
-      margin: '6.5% auto 2% auto',
+      margin: '6.5% auto 4% auto',
+    },
+    [theme.breakpoints.down('sm')]: {
+      margin: '6.5% auto 7% auto',
     },
     padding: '0 1.5%',
   },
   expDescribe: {
     textAlign: 'center',
     '& h3': {
-      marginTop: '1%',
+      marginTop: '0.5%',
       color: '#2e585d',
       fontWeight: '700',
       letterSpacing: '5px',
@@ -55,17 +58,22 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   timeline: {
-    marginBottom: '4%',
+    marginBottom: '3%',
     [theme.breakpoints.down('lg')]: {
-      marginBottom: '5%',
+      marginBottom: '6%',
     },
-  },
-  dateStyle: {
-    fontFamily: 'Lato, sans-serif',
-    textTransform: 'uppercase',
-    color: '#2e585b',
-    [theme.breakpoints.down('1169')]: {
-      color: '#fff',
+    '& h5': {
+      fontSize: '1.05em',
+      fontWeight: 'bold',
+      color: '#ffffff !important',
+    },
+    '& h6': {
+      fontSize: '0.89rem',
+      fontFamily: 'Lato, sans-serif',
+      color: '#ffffff !important',
+    },
+    '& p': {
+      fontSize: '0.8rem',
     },
   },
 }));
