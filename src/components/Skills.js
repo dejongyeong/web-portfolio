@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -7,12 +7,18 @@ import {
   faTools,
   faGlobe,
 } from '@fortawesome/free-solid-svg-icons';
+import uuid from 'react-uuid';
+import { Parallax } from 'react-parallax';
+
+import Backdrop from '../img/skills-background-img.jpg';
+import MobileSkills from './MobileSkills';
 
 // constant content
 const contents = [
   {
-    key: 1,
-    title: 'Technical Skills',
+    key: uuid(),
+    title: 'Technical',
+    subtitle: 'Continuously Learning',
     icons: faCogs,
     skillList: [
       'Python',
@@ -27,11 +33,11 @@ const contents = [
       'C#',
       'ROS Framework',
     ],
-    tipText: 'expertise in approx. order',
   },
   {
-    key: 2,
+    key: uuid(),
     title: 'Tools',
+    subtitle: 'experience with',
     icons: faTools,
     skillList: [
       'Git / GitHub',
@@ -46,11 +52,11 @@ const contents = [
       'Visual Studio',
       'Photoshop CS5',
     ],
-    tipText: 'experience with',
   },
   {
-    key: 3,
+    key: uuid(),
     title: 'Soft Skills',
+    subtitle: 'personality traits',
     icons: faBrain,
     skillList: [
       'Time Management',
@@ -65,90 +71,150 @@ const contents = [
       'Logical',
       'Analytical',
     ],
-    tipText: 'personality traits',
   },
   {
-    key: 4,
+    key: uuid(),
     title: 'Languages',
+    subtitle: 'in order of proficiency',
     icons: faGlobe,
     skillList: ['Mandarin', 'English', 'Cantonese', 'Malaysian Malay'],
-    tipText: 'in order of proficiency',
   },
 ];
 
 const useStyle = makeStyles((theme) => ({
+  skillsLayer: {
+    position: 'absolute',
+    background: 'rgba(0, 173, 181, 0.15)',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%,-50%)',
+    width: '100%',
+    height: '100vh',
+    [theme.breakpoints.down('lg')]: {
+      height: '100%',
+    },
+  },
+  skillsMain: {
+    height: '100vh',
+    width: '100%',
+    alignItems: 'flex-start',
+    display: 'flex',
+    justifyContent: 'center',
+    [theme.breakpoints.down('lg')]: {
+      height: '100%',
+      alignItems: 'center',
+    },
+  },
+  skillContents: {
+    width: '70%',
+    height: '85%',
+    margin: '0 auto',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxSizing: 'border-box',
+    textAlign: 'center',
+    '& h3': {
+      padding: '1% 0 0 0',
+      color: '#2e585d',
+      fontWeight: '700',
+      letterSpacing: '4px',
+      textTransform: 'uppercase',
+      fontFamily: 'Montserrat, sans-serif',
+      marginBottom: '0',
+      marginTop: '8%',
+      textShadow: '1px -2px 3px rgba(150, 150, 150, 1)',
+      [theme.breakpoints.down('sm')]: {
+        marginTop: '7%',
+        fontSize: '2.5rem',
+      },
+      // [theme.breakpoints.up('xl')]: {
+      //   animation: `$aboutEffect 2000ms ${theme.transitions.easing.easeInOut}`,
+      // },
+    },
+    '& span': {
+      color: '#393e46',
+    },
+    [theme.breakpoints.down('lg')]: {
+      margin: '7% auto 15% auto',
+    },
+    [theme.breakpoints.down('md')]: {
+      margin: '15% auto',
+    },
+    [theme.breakpoints.down('sm')]: {
+      margin: '30% auto',
+    },
+    // '@keyframes aboutEffect': {
+    //   '0%': { transform: 'translate3d(0, -50px, 0)' },
+    //   '100%': { transform: 'translate3d(0, 0, 0)' },
+    // },
+  },
+  skillsWrapper: {
+    width: '95%',
+    boxSizing: 'border-box',
+    margin: '3% auto 0 auto',
+    padding: '0',
+    display: 'none',
+    [theme.breakpoints.up('lg')]: {
+      display: 'inline',
+    },
+    [theme.breakpoints.between('768', '1023')]: {
+      margin: '6% auto 0 auto',
+    },
+  },
   root: {
     flexGrow: 1,
   },
-  skillWrap: {
-    display: 'block',
-    textAlign: 'center',
-    margin: '0 auto',
-  },
-  paperWrap: {
-    width: '100%',
-    margin: '0 auto',
-  },
   paper: {
-    display: 'flex',
-    justifyContent: 'center',
-    margin: '0 auto',
-    [theme.breakpoints.down('lg')]: {
-      margin: '0 auto 8% auto',
-    },
-  },
-  aboutIcons: {
-    width: '140px',
-    paddingBottom: '140px',
-    borderRadius: '50%',
-    backgroundColor: '#2e5b5d',
-    position: 'relative',
+    boxSizing: 'border-box',
+    height: '550px',
+    width: '100%',
+    textAlign: 'center !important',
+    backgroundColor: 'rgba(46, 88, 91, 0.9)',
     color: '#ffffff',
-    margin: '0 auto',
-  },
-  iconsContent: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    textAlign: 'center',
-  },
-  skillsTitle: {
-    margin: '15% auto 0 auto',
-    color: '#2e585b',
-    fontSize: '1rem',
-    fontFamily: 'Lato, san-serif',
-    textTransform: 'uppercase',
-    fontWeight: 'bold',
-  },
-  skillsContent: {
-    '& p': {
-      color: '#222831',
-      fontSize: '0.88rem',
-      textAlign: 'center',
-      fontFamily: 'Montserrat, sans-serif',
-      lineHeight: '1.75rem',
-      fontWeight: '400',
+    padding: '3% 5px',
+    '& h5': {
+      fontSize: '1.2rem',
+      fontFamily: 'Lato, san-serif',
+      textTransform: 'uppercase',
+      fontWeight: 'bold',
+      letterSpacing: '2px',
+      color: '#071921',
+    },
+    [theme.breakpoints.up('lg')]: {
+      '&:hover': {
+        transform: 'translate(0, -10px)',
+        msTransform: 'translate(0, -10px)',
+      },
+      transition: 'transform 0.3s ease-out',
     },
   },
-  subtitle: {
-    margin: '0 auto 8% auto',
+  icons: {
+    margin: '30px auto 20px auto',
+    color: '#051a1b',
+  },
+  title: {
+    marginTop: '10px',
     '& p': {
-      fontSize: '0.8rem',
-      color: '#00adb5',
+      fontFamily: 'Lato, san-serif',
+      fontSize: '0.89rem',
+      paddingTop: '2px',
       textTransform: 'lowercase',
+      color: '#00adb5',
+    },
+  },
+  lists: {
+    marginTop: '35px',
+    '& p': {
+      fontFamily: 'Montserrat, sans-serif',
+      fontSize: '0.9rem',
+      lineHeight: '30px',
+      color: '#c5cddd',
     },
   },
 }));
-
-// subtitle
-function Subtitle(props) {
-  return (
-    <div className={props.classes.subtitle}>
-      <Typography variant="body1">{props.content.tipText}</Typography>
-    </div>
-  );
-}
 
 // skill listing
 function SkillLists(props) {
@@ -167,40 +233,64 @@ function Skills() {
   const classes = useStyle();
 
   return (
-    <div className={classes.paperWrap}>
-      <Grid
-        container
-        className={classes.root}
-        spacing={0}
-        justify="space-between"
-        alignItems="flex-start"
+    <div>
+      <Parallax
+        bgImage={Backdrop}
+        strength={350}
+        bgImageAlt="Background Image"
+        bgImageStyle={{ opacity: '90%' }}
+        renderLayer={() => (
+          <div>
+            <div className={classes.skillsLayer} />
+          </div>
+        )}
       >
-        {contents.map((content) => (
-          <Grid
-            item
-            xs={12}
-            lg={6}
-            xl={3}
-            key={content.key}
-            className={classes.paper}
-          >
-            <div className={classes.skillWrap}>
-              <div className={classes.aboutIcons}>
-                <div className={classes.iconsContent}>
-                  <FontAwesomeIcon icon={content.icons} size="3x" />
-                </div>
-              </div>
-              <Typography variant="h6" className={classes.skillsTitle}>
-                {content.title}
-              </Typography>
-              <Subtitle content={content} classes={classes} />
-              <div className={classes.skillsContent}>
-                <SkillLists content={content} />
-              </div>
+        <div className={classes.skillsMain}>
+          <div className={classes.skillContents}>
+            <Typography variant="h3">
+              My <span>Skills</span>
+            </Typography>
+            <Typography
+              variant="body1"
+              style={{
+                color: '#00adb5',
+                fontFamily: 'Lato, sans-serif',
+                fontWeight: 'bold',
+              }}
+            >
+              Technical Skills and Personal Qualities
+            </Typography>
+            <div className={classes.skillsWrapper}>
+              <Grid
+                container
+                className={classes.root}
+                spacing={3}
+                alignItems="center"
+              >
+                {contents.map((content) => (
+                  <Grid item xs={12} lg={6} xl={3} key={content.key}>
+                    <Paper elevation={2} className={classes.paper}>
+                      <div className={classes.icons}>
+                        <FontAwesomeIcon icon={content.icons} size="3x" />
+                      </div>
+                      <div className={classes.title}>
+                        <Typography variant="h5">{content.title}</Typography>
+                        <Typography variant="body1">
+                          {content.subtitle}
+                        </Typography>
+                      </div>
+                      <div className={classes.lists}>
+                        <SkillLists content={content} />
+                      </div>
+                    </Paper>
+                  </Grid>
+                ))}
+              </Grid>
             </div>
-          </Grid>
-        ))}
-      </Grid>
+            <MobileSkills contents={contents} />
+          </div>
+        </div>
+      </Parallax>
     </div>
   );
 }

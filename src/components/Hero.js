@@ -15,33 +15,25 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     top: '50%',
     transform: 'translate(-50%,-50%)',
-    width: '100vw',
+    width: '100%',
     height: '100vh',
     [theme.breakpoints.down('md')]: {
-      height: '137vh',
-      width: '137vw',
-    },
-    [theme.breakpoints.down('sm')]: {
-      height: '165vh',
-      width: '165vw',
+      height: '100%',
     },
   },
   main: {
     height: '100vh',
-    width: '100vw',
+    width: '100%',
     alignItems: 'center',
     display: 'flex',
     justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
-      height: '137vh',
-    },
-    [theme.breakpoints.down('sm')]: {
-      height: '165vh',
+      height: '100%',
     },
   },
   content: {
     width: '90%',
-    height: '80%',
+    height: '75%',
     margin: '0 auto',
     position: 'relative',
     display: 'flex',
@@ -49,6 +41,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     boxSizing: 'border-box',
+    [theme.breakpoints.down('md')]: {
+      margin: '25% auto',
+    },
+    [theme.breakpoints.down('sm')]: {
+      margin: '30% auto',
+    },
   },
   avatar: {
     maxWidth: '220px',
@@ -88,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
       textTransform: 'uppercase',
       fontWeight: '800',
       marginTop: '0.5%',
+      textShadow: '1px -2px 3px rgba(150, 150, 150, 1)',
     },
   },
   description: {
@@ -123,10 +122,10 @@ function Hero() {
     <div>
       <Parallax
         bgImage={Backdrop}
-        strength={200}
+        strength={350}
         bgImageAlt="Background Image"
         bgImageStyle={{
-          opacity: '50%',
+          opacity: '75%',
         }}
         renderLayer={() => (
           <div>

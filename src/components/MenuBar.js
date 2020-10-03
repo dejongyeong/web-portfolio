@@ -6,7 +6,7 @@ import {
   Typography,
   useScrollTrigger,
 } from '@material-ui/core';
-import { Mail, Home, Info, Folder, Timeline } from '@material-ui/icons';
+import { Mail, Home, Folder, Timeline, Build } from '@material-ui/icons';
 import PropTypes from 'prop-types';
 
 import MenuItems from './MenuItem';
@@ -65,8 +65,8 @@ function MenuBar(props) {
 
   const menus = [
     { text: 'Home', link: '#home', icon: <Home /> },
-    { text: 'About', link: '#about', icon: <Info /> },
     { text: 'Portfolio', link: '#portfolio', icon: <Folder /> },
+    { text: 'Skills', link: '#skills', icon: <Build /> },
     { text: 'Experience', link: '#experience', icon: <Timeline /> },
     { text: 'Contact', link: '#contact', icon: <Mail /> },
   ];
