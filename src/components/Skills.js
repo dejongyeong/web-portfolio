@@ -98,16 +98,20 @@ const useStyle = makeStyles((theme) => ({
   skillsMain: {
     height: '100vh',
     width: '100vw',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     display: 'flex',
     justifyContent: 'center',
     [theme.breakpoints.between('768', '1023')]: {
       height: '155vh',
+      alignItems: 'center',
+    },
+    [theme.breakpoints.down('lg')]: {
+      alignItems: 'center',
     },
   },
   skillContents: {
     width: '70%',
-    height: '75%',
+    height: '85%',
     margin: '0 auto',
     position: 'relative',
     display: 'flex',
