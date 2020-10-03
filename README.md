@@ -55,11 +55,10 @@ Initial research was conducted before selecting which framework to use, e.g. siz
 
 \
 **Acknowledgement**
-Background Images:
 
 - Lost reference on landing page background image. Apologies.
-- Photo by [Jake Blucker](https://unsplash.com/@jakeblucker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-- Photo by [Danis Lou](https://unsplash.com/@danislou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- Background photo by [Cosmic Timetraveler](https://unsplash.com/@cosmictimetraveler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- Background photo by [Danis Lou](https://unsplash.com/@danislou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 \
 \
