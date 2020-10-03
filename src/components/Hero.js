@@ -15,20 +15,18 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     top: '50%',
     transform: 'translate(-50%,-50%)',
-    width: '100vw',
+    width: '100%',
     height: '100vh',
     [theme.breakpoints.down('md')]: {
       height: '137vh',
-      width: '137vw',
     },
     [theme.breakpoints.down('sm')]: {
-      height: '165vh',
-      width: '165vw',
+      height: '220vh',
     },
   },
   main: {
     height: '100vh',
-    width: '100vw',
+    width: '100%',
     alignItems: 'center',
     display: 'flex',
     justifyContent: 'center',
@@ -36,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
       height: '137vh',
     },
     [theme.breakpoints.down('sm')]: {
-      height: '165vh',
+      height: '220vh',
     },
   },
   content: {
@@ -123,10 +121,10 @@ function Hero() {
     <div>
       <Parallax
         bgImage={Backdrop}
-        strength={200}
+        strength={350}
         bgImageAlt="Background Image"
         bgImageStyle={{
-          opacity: '70%',
+          opacity: '75%',
         }}
         renderLayer={() => (
           <div>

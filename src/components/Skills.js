@@ -88,24 +88,32 @@ const useStyle = makeStyles((theme) => ({
     left: '50%',
     top: '50%',
     transform: 'translate(-50%,-50%)',
-    width: '100vw',
+    width: '100%',
     height: '100vh',
-    [theme.breakpoints.between('768', '1023')]: {
-      height: '155vh',
-      width: '155vw',
+    [theme.breakpoints.between('768', '1024')]: {
+      height: '156vh',
+      // width: '155vw',
+    },
+    [theme.breakpoints.down('sm')]: {
+      height: '175vh',
+      // width: '175vw',
     },
   },
   skillsMain: {
     height: '100vh',
-    width: '100vw',
+    width: '100%',
     alignItems: 'flex-start',
     display: 'flex',
     justifyContent: 'center',
-    [theme.breakpoints.between('768', '1023')]: {
-      height: '155vh',
+    [theme.breakpoints.between('768', '1024')]: {
+      height: '156vh',
       alignItems: 'center',
     },
     [theme.breakpoints.down('lg')]: {
+      alignItems: 'center',
+    },
+    [theme.breakpoints.down('sm')]: {
+      height: '175vh',
       alignItems: 'center',
     },
   },
@@ -128,8 +136,9 @@ const useStyle = makeStyles((theme) => ({
       textTransform: 'uppercase',
       fontFamily: 'Montserrat, sans-serif',
       marginBottom: '0',
+      marginTop: '8%',
       [theme.breakpoints.down('sm')]: {
-        margin: '7% 0 0 0',
+        marginTop: '7%',
         fontSize: '2.5rem',
       },
       // [theme.breakpoints.up('xl')]: {
@@ -165,7 +174,7 @@ const useStyle = makeStyles((theme) => ({
     height: '550px',
     width: '100%',
     textAlign: 'center !important',
-    backgroundColor: 'rgba(46, 88, 91, 0.8)',
+    backgroundColor: 'rgba(46, 88, 91, 0.9)',
     color: '#ffffff',
     padding: '3% 5px',
     '& h5': {
@@ -222,9 +231,9 @@ function Skills() {
     <div>
       <Parallax
         bgImage={Backdrop}
-        strength={200}
+        strength={350}
         bgImageAlt="Background Image"
-        bgImageStyle={{ opacity: '70%' }}
+        bgImageStyle={{ opacity: '90%' }}
         renderLayer={() => (
           <div>
             <div className={classes.skillsLayer} />
@@ -240,7 +249,7 @@ function Skills() {
               variant="body1"
               style={{ color: '#00adb5', fontFamily: 'Lato, sans-serif' }}
             >
-              Skills and Personal Qualities
+              Technical Skills and Personal Qualities
             </Typography>
             <div className={classes.skillsWrapper}>
               <Grid

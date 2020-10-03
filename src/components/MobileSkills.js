@@ -14,7 +14,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: {
       display: 'none',
     },
-    width: '100%',
+    width: '80%',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+    },
   },
   paper: {
     boxSizing: 'border-box',

@@ -53,7 +53,11 @@ function HeroButton(props) {
         direction="row"
       >
         <Grid item xs={12} lg={6}>
-          <AnchorLink href="#about" onClick={preventDefault} offset={() => 90}>
+          <AnchorLink
+            href="#portfolio"
+            onClick={preventDefault}
+            offset={() => 90}
+          >
             <StyledButton>{props.profile}</StyledButton>
           </AnchorLink>
         </Grid>
