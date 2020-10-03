@@ -128,10 +128,17 @@ const useStyle = makeStyles((theme) => ({
         margin: '7% 0 0 0',
         fontSize: '2.5rem',
       },
+      // [theme.breakpoints.up('xl')]: {
+      //   animation: `$aboutEffect 2000ms ${theme.transitions.easing.easeInOut}`,
+      // },
     },
     '& span': {
       color: '#393e46',
     },
+    // '@keyframes aboutEffect': {
+    //   '0%': { transform: 'translate3d(0, -50px, 0)' },
+    //   '100%': { transform: 'translate3d(0, 0, 0)' },
+    // },
   },
   skillsWrapper: {
     width: '95%',
