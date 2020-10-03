@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     '& p': {
       color: '#222831',
       fontSize: '1.05rem',
-      fontWeight: '500',
+      fontWeight: '400',
       fontFamily: 'Montserrat, sans-serif',
       marginBottom: '3.5%',
     },
@@ -146,7 +146,7 @@ function Hero() {
               </Typography>
               <div className={styles.description}>
                 <Typography variant="body1">
-                  An aspiring Postgraduate Researcher, Software Developer based
+                  An aspiring postgraduate researcher, software developer based
                   in Ireland. Passionate about building modern{' '}
                   <strong style={{ color: '#2e585d' }}>
                     Web &amp; Mobile Applications
