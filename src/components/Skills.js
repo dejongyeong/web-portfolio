@@ -90,13 +90,8 @@ const useStyle = makeStyles((theme) => ({
     transform: 'translate(-50%,-50%)',
     width: '100%',
     height: '100vh',
-    [theme.breakpoints.between('768', '1024')]: {
-      height: '156vh',
-      // width: '155vw',
-    },
-    [theme.breakpoints.down('sm')]: {
-      height: '175vh',
-      // width: '175vw',
+    [theme.breakpoints.down('lg')]: {
+      height: '100%',
     },
   },
   skillsMain: {
@@ -105,15 +100,8 @@ const useStyle = makeStyles((theme) => ({
     alignItems: 'flex-start',
     display: 'flex',
     justifyContent: 'center',
-    [theme.breakpoints.between('768', '1024')]: {
-      height: '156vh',
-      alignItems: 'center',
-    },
     [theme.breakpoints.down('lg')]: {
-      alignItems: 'center',
-    },
-    [theme.breakpoints.down('sm')]: {
-      height: '175vh',
+      height: '100%',
       alignItems: 'center',
     },
   },
@@ -137,6 +125,7 @@ const useStyle = makeStyles((theme) => ({
       fontFamily: 'Montserrat, sans-serif',
       marginBottom: '0',
       marginTop: '8%',
+      textShadow: '1px -2px 3px rgba(150, 150, 150, 1)',
       [theme.breakpoints.down('sm')]: {
         marginTop: '7%',
         fontSize: '2.5rem',
@@ -147,6 +136,15 @@ const useStyle = makeStyles((theme) => ({
     },
     '& span': {
       color: '#393e46',
+    },
+    [theme.breakpoints.down('lg')]: {
+      margin: '7% auto 15% auto',
+    },
+    [theme.breakpoints.down('md')]: {
+      margin: '15% auto',
+    },
+    [theme.breakpoints.down('sm')]: {
+      margin: '30% auto',
     },
     // '@keyframes aboutEffect': {
     //   '0%': { transform: 'translate3d(0, -50px, 0)' },

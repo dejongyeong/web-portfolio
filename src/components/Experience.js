@@ -45,12 +45,12 @@ const useStyles = makeStyles((theme) => ({
         margin: '7% 0 3% 0',
         fontSize: '2.5rem',
       },
+      textShadow: '1px -2px 3px rgba(150, 150, 150, 1)',
     },
     '& p': {
       color: '#00adb5',
-      fontWeight: '400',
-      fontFamily: 'Lato, sans-serif',
       fontWeight: 'bold',
+      fontFamily: 'Lato, sans-serif',
     },
     marginBottom: '3%',
     [theme.breakpoints.down('sm')]: {
