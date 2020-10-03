@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import uuid from 'react-uuid';
 
 import Hero from './Hero';
 import MenuBar from './MenuBar';
-import About from './About';
+import Skills from './Skills';
 import Experience from './Experience';
+import About from './About';
 
 // gsap animation
 gsap.registerPlugin(ScrollTrigger);
@@ -35,10 +37,10 @@ const theme = createMuiTheme({
 });
 
 const sections = [
-  { key: 1, id: 'about', comp: <About /> },
-  { key: 2, id: 'portfolio', comp: <Hero /> },
-  { key: 3, id: 'experience', comp: <Experience /> },
-  { key: 4, id: 'contact', comp: <Hero /> },
+  { key: uuid(), id: 'experience', comp: <Experience /> },
+  { key: uuid(), id: 'about', comp: <Skills /> },
+  { key: uuid(), id: 'experience', comp: <Experience /> },
+  { key: uuid(), id: 'contact', comp: <Hero /> },
 ];
 
 // gsap animation tutorial: https://ihatetomatoes.net/react-and-greensock-tutorial-for-beginners/
