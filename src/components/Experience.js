@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
       color: '#00adb5',
       fontWeight: '400',
       fontFamily: 'Lato, sans-serif',
+      fontWeight: 'bold',
     },
     marginBottom: '3%',
     [theme.breakpoints.down('sm')]: {
@@ -90,11 +91,11 @@ function Experience() {
             My <span>Journey</span>
           </Typography>
           <Typography variant="body1">
-            Previous Work Experience and Qualifications
+            Work Experience and Qualifications
           </Typography>
         </div>
         <div className={classes.timeline}>
-          <Timeline styles={classes} />
+          <Timeline />
         </div>
       </div>
     </div>

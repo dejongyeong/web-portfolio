@@ -185,6 +185,13 @@ const useStyle = makeStyles((theme) => ({
       letterSpacing: '2px',
       color: '#071921',
     },
+    [theme.breakpoints.up('lg')]: {
+      '&:hover': {
+        transform: 'translate(0, -10px)',
+        msTransform: 'translate(0, -10px)',
+      },
+      transition: 'transform 0.3s ease-out',
+    },
   },
   icons: {
     margin: '30px auto 20px auto',
@@ -247,7 +254,11 @@ function Skills() {
             </Typography>
             <Typography
               variant="body1"
-              style={{ color: '#00adb5', fontFamily: 'Lato, sans-serif' }}
+              style={{
+                color: '#00adb5',
+                fontFamily: 'Lato, sans-serif',
+                fontWeight: 'bold',
+              }}
             >
               Technical Skills and Personal Qualities
             </Typography>
