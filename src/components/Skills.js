@@ -8,9 +8,10 @@ import {
   faGlobe,
 } from '@fortawesome/free-solid-svg-icons';
 import uuid from 'react-uuid';
+import { Parallax } from 'react-parallax';
 
 import Backdrop from '../img/skills-background-img.jpg';
-import { Parallax } from 'react-parallax';
+import MobileSkills from './MobileSkills';
 
 // constant content
 const contents = [
@@ -114,6 +115,7 @@ const useStyle = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     boxSizing: 'border-box',
+    textAlign: 'center',
     '& h3': {
       padding: '1% 0 0 0',
       color: '#2e585d',
@@ -136,6 +138,10 @@ const useStyle = makeStyles((theme) => ({
     boxSizing: 'border-box',
     margin: '3% auto 0 auto',
     padding: '0',
+    display: 'none',
+    [theme.breakpoints.up('lg')]: {
+      display: 'inline',
+    },
     [theme.breakpoints.between('768', '1023')]: {
       margin: '6% auto 0 auto',
     },
@@ -252,6 +258,7 @@ function Skills() {
                 ))}
               </Grid>
             </div>
+            <MobileSkills contents={contents} />
           </div>
         </div>
       </Parallax>
