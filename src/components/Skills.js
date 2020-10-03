@@ -125,7 +125,7 @@ const useStyle = makeStyles((theme) => ({
       fontFamily: 'Montserrat, sans-serif',
       marginBottom: '0',
       marginTop: '8%',
-      textShadow: '1px -2px 3px rgba(150, 150, 150, 1)',
+      textShadow: '1px -2px 4px rgba(150, 150, 150, 1)',
       [theme.breakpoints.down('sm')]: {
         marginTop: '7%',
         fontSize: '2.5rem',
@@ -238,7 +238,7 @@ function Skills() {
         bgImage={Backdrop}
         strength={350}
         bgImageAlt="Background Image"
-        bgImageStyle={{ opacity: '90%' }}
+        bgImageStyle={{ opacity: '80%' }}
         renderLayer={() => (
           <div>
             <div className={classes.skillsLayer} />

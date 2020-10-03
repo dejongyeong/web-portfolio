@@ -8,6 +8,7 @@ import Hero from './Hero';
 import MenuBar from './MenuBar';
 import Skills from './Skills';
 import Experience from './Experience';
+import Contact from './Contact';
 
 // gsap animation
 gsap.registerPlugin(ScrollTrigger);
@@ -39,7 +40,7 @@ const sections = [
   { key: uuid(), id: 'portfolio', comp: <Experience /> },
   { key: uuid(), id: 'skills', comp: <Skills /> },
   { key: uuid(), id: 'experience', comp: <Experience /> },
-  { key: uuid(), id: 'contact', comp: <Hero /> },
+  { key: uuid(), id: 'contact', comp: <Contact /> },
 ];
 
 // gsap animation tutorial: https://ihatetomatoes.net/react-and-greensock-tutorial-for-beginners/

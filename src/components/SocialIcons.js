@@ -9,16 +9,16 @@ import { makeStyles, Grid } from '@material-ui/core';
 
 const links = [
   'https://github.com/dejongyeong',
-  'https://www.linkedin.com/in/de-jong-yeong/',
   'https://orcid.org/0000-0002-4626-8040',
+  'https://www.linkedin.com/in/de-jong-yeong/',
 ];
-const linksIcon = [faGithubSquare, faLinkedin, faOrcid];
+const linksIcon = [faGithubSquare, faOrcid, faLinkedin];
 
 const useStyles = makeStyles((theme) => ({
   social: {
     textAlign: 'center',
     '& a': {
-      color: '#2e585b',
+      color: '#222831',
     },
     '& a:hover': {
       color: '#00adb5',

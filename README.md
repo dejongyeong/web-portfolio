@@ -14,7 +14,7 @@
 - Debugger for Chrome
 
 \
-\*The first version of online portfolio was built during leisure time. Objective is to learn new frameworks for front-end development.\*\*
+_The first version of online portfolio was built during leisure time. Objective is to learn new frameworks for front-end development._
 
 Initial research was conducted before selecting which framework to use, e.g. size and load times, learning curve etc. as well as color palette selection. Here are some results found online:
 
@@ -45,7 +45,6 @@ Initial research was conducted before selecting which framework to use, e.g. siz
 **Thid Party NPM Libraries**
 
 - React Vertical Timeline by [Stephane Monnot](https://github.com/stephane-monnot/react-vertical-timeline)
-- React Particle Animation by [Travis Fischer](https://github.com/transitive-bullshit/react-particle-animation)
 - React Parallax Scrolling by [Richard Rutsche](https://github.com/rrutsche/react-parallax)
 
 \
@@ -53,6 +52,14 @@ Initial research was conducted before selecting which framework to use, e.g. siz
 
 - [ ] ESLint and/or Prettier integration in future portfolio
 - [ ] Further research on responsiveness best practices, e.g. images, typography etc.
+
+\
+**Acknowledgement**
+Background Images:
+
+- Lost reference on landing page background image. Apologies.
+- Photo by [Jake Blucker](https://unsplash.com/@jakeblucker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- Photo by [Danis Lou](https://unsplash.com/@danislou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 \
 \

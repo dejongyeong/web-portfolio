@@ -79,14 +79,14 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Lato, sans-serif',
       fontSize: '1rem',
       textTransform: 'lowercase',
-      color: '#393e46',
+      color: '#222831',
     },
     '& h2': {
       letterSpacing: '0.15rem',
       textTransform: 'uppercase',
       fontWeight: '800',
       marginTop: '0.5%',
-      textShadow: '1px -2px 3px rgba(150, 150, 150, 1)',
+      textShadow: '1px -2px 4px rgba(150, 150, 150, 1)',
     },
   },
   description: {
@@ -125,7 +125,7 @@ function Hero() {
         strength={350}
         bgImageAlt="Background Image"
         bgImageStyle={{
-          opacity: '75%',
+          opacity: '80%',
         }}
         renderLayer={() => (
           <div>
