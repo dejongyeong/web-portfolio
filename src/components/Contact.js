@@ -36,8 +36,8 @@ const useStyle = makeStyles((theme) => ({
     },
   },
   content: {
-    width: '75%',
-    height: '90%',
+    width: '50%',
+    height: '80%',
     margin: '0 auto',
     position: 'relative',
     display: 'flex',
@@ -107,97 +107,33 @@ const useStyle = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  contact: {
+    width: '45%',
+    height: 'auto',
+    margin: '3% auto 0 auto',
+    border: '1px solid black',
+    color: '#222831',
+  },
   about: {
     width: '100%',
     margin: '0 auto',
     '& p': {
       fontFamily: 'Lato, sans-serif',
-      fontWeight: '300',
-      fontSize: '1rem',
-      lineHeight: '27px',
-      color: '#fbfbfb',
-      textAlign: 'center',
-    },
-    '& p:last-child': {
-      marginTop: '20px',
       fontWeight: '400',
+      fontSize: '1rem',
+      textAlign: 'center',
       color: '#c5cddd',
     },
-    '& a': {
-      textDecoration: 'none',
-      '& span': {
-        color: '#c5cddd',
-        fontWeight: '400',
-      },
-    },
-    '& a:hover': {
-      textDecoration: 'underline',
-      textDecorationColor: '#c5cddd',
-    },
-  },
-  contact: {
-    width: '50%',
-    height: 'auto',
-    margin: '3.5% auto 0 auto',
-    border: '1px solid black',
-    color: '#222831',
   },
 }));
 
 function About() {
   return (
-    <>
-      <Typography variant="body1">
-        Born in the mid-1990s. Raised in a city in Malaysia. I'm De Jong Yeong
-        (DJ) and have always been interested in technologies, with a passion and
-        eagerness to learn more about how software and artificial intelligence
-        applications are built. I am a 2019 graduated Computer Science student
-        at the{' '}
-        <a
-          href="https://www.ittralee.ie/en/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Institute of Technology, Tralee, Ireland</span>
-        </a>
-        , focusing on{' '}
-        <a
-          href="http://www.ittralee.ie/en/InformationAbout/Courses/SchoolofBusinessComputingandHumanities/Computing/TL810-BScHonsinComputingSoftwareDevelopment/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Software Development</span>
-        </a>{' '}
-        and currently pursuing{' '}
-        <a
-          href="http://www.ittralee.ie/en/InformationAbout/Courses/HigherDiplomaandPostgraduateStudies/FullorPart-timeResearchPostgraduateProgrammes/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Masters by Research in Engineering</span>
-        </a>{' '}
-        with awarded research scholarship. I am currently working on a
-        dissertation about environment perception with multimodal sensor fusion
-        for container cranes. I consider myself as a forever student, eager to
-        both build on my technical skills by building side projects and stay in
-        tune with the latest technologies through Medium, LinkedIn and YouTube.
-        I cannot say with 100% confidence where I see myself in five years or
-        what my big career goal is, due to fast-changing world of technology and
-        does not have enough professional experience to be certain about such
-        things. However, I know that I can provide a fresh take and an
-        extraordinary approach to every project. I am always open to challenges
-        and constructive feedbacks and I would like to become a team player and
-        dedicate my skills and talents to develop high-quality and unique
-        projects. When I am not coding or stay in tune with new technologies, I
-        enjoy playing chess and online games with friends - a great way to boost
-        teamwork, unwind, de-stress and keep the mind sharp.
-      </Typography>
-      <Typography variant="body1">
-        Although I'm currently in full-time position of my postgraduate
-        research, my inbox is always open. Whether you have a question or just
-        want to say hello, i'll try my best to get back to you!!
-      </Typography>
-    </>
+    <Typography variant="body1">
+      Although I'm currently in full-time position of my postgraduate research,
+      my inbox is always open. Whether you have a question or just want to say
+      hello, i'll try my best to get back to you!!
+    </Typography>
   );
 }
 

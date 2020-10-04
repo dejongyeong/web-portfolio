@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   expContainer: {
-    width: '90%',
+    width: '80%',
     [theme.breakpoints.down('md')]: {
       width: '85%',
     },
@@ -53,9 +53,14 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Lato, sans-serif',
       textTransform: 'lowercase',
     },
-    marginBottom: '3%',
-    [theme.breakpoints.down('sm')]: {
-      marginTop: '7%',
+    marginBottom: '2%',
+    [theme.breakpoints.down('xl')]: {
+      marginBottom: '3%',
+    },
+    [theme.breakpoints.down('lg')]: {
+      marginBottom: '4%',
+    },
+    [theme.breakpoints.down('md')]: {
       marginBottom: '6%',
     },
   },
@@ -78,7 +83,93 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '0.8rem',
     },
   },
+  about: {
+    width: '80%',
+    margin: '0 auto 1% auto',
+    [theme.breakpoints.down('xl')]: {
+      marginBottom: '3%',
+    },
+    [theme.breakpoints.down('lg')]: {
+      marginBottom: '5%',
+    },
+    [theme.breakpoints.down('md')]: {
+      margin: '0 auto 7% auto',
+    },
+    '& p': {
+      fontFamily: 'Lato, sans-serif',
+      fontWeight: '400',
+      fontSize: '1.05rem',
+      lineHeight: '27px',
+      color: '#2e585b',
+      textAlign: 'center',
+    },
+    '& a': {
+      textDecoration: 'none',
+      '& span': {
+        color: '#00adb5',
+      },
+    },
+    '& a:hover': {
+      textDecoration: 'underline',
+      textDecorationColor: '#2e585b',
+    },
+    backgroundColor: 'rgba(182, 211, 213, 0.2)',
+    padding: '1.5%',
+    borderRadius: '10px',
+  },
 }));
+
+function About() {
+  return (
+    <>
+      <Typography variant="body1">
+        Born in the mid-1990s. Raised in a city in Malaysia. I'm De Jong Yeong
+        (DJ) and have always been interested in technologies, with a passion and
+        eagerness to learn more about how software and artificial intelligence
+        applications are built. I am a 2019 graduated Computer Science student
+        at the{' '}
+        <a
+          href="https://www.ittralee.ie/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Institute of Technology, Tralee, Ireland</span>
+        </a>
+        , focusing on{' '}
+        <a
+          href="http://www.ittralee.ie/en/InformationAbout/Courses/SchoolofBusinessComputingandHumanities/Computing/TL810-BScHonsinComputingSoftwareDevelopment/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Software Development</span>
+        </a>{' '}
+        and currently pursuing{' '}
+        <a
+          href="http://www.ittralee.ie/en/InformationAbout/Courses/HigherDiplomaandPostgraduateStudies/FullorPart-timeResearchPostgraduateProgrammes/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Masters by Research in Engineering</span>
+        </a>{' '}
+        with awarded research scholarship. I am currently working on a
+        dissertation about environment perception with multimodal sensor fusion
+        for container cranes. I consider myself as a forever student, eager to
+        both build on my technical skills by building side projects and stay in
+        tune with the latest technologies through Medium, LinkedIn and YouTube.
+        I cannot say with 100% confidence where I see myself in five years or
+        what my big career goal is, due to fast-changing world of technology and
+        does not have enough professional experience to be certain about such
+        things. However, I know that I can provide a fresh take and an
+        extraordinary approach to every project. I am always open to challenges
+        and constructive feedbacks and I would like to become a team player and
+        dedicate my skills and talents to develop high-quality and unique
+        projects. When I am not coding or stay in tune with new technologies, I
+        enjoy playing chess and online games with friends - a great way to boost
+        teamwork, unwind, de-stress and keep the mind sharp.
+      </Typography>
+    </>
+  );
+}
 
 // timeline from: https://www.npmjs.com/package/react-vertical-timeline-component
 function Experience() {
@@ -92,8 +183,11 @@ function Experience() {
             My <span>Journey</span>
           </Typography>
           <Typography variant="body1">
-            Work Experience and Qualifications
+            A little bit about me, Work Experience and Qualifications
           </Typography>
+        </div>
+        <div className={classes.about}>
+          <About />
         </div>
         <div className={classes.timeline}>
           <Timeline />
