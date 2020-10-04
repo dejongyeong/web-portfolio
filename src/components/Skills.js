@@ -238,7 +238,7 @@ function Skills() {
         bgImage={Backdrop}
         strength={350}
         bgImageAlt="Background Image"
-        bgImageStyle={{ opacity: '80%' }}
+        bgImageStyle={{ opacity: '60%' }}
         renderLayer={() => (
           <div>
             <div className={classes.skillsLayer} />
@@ -253,13 +253,13 @@ function Skills() {
             <Typography
               variant="body1"
               style={{
-                color: '#222831',
+                color: '#393e46',
                 fontFamily: 'Lato, sans-serif',
-                fontWeight: '400',
+                fontWeight: '300',
                 textTransform: 'lowercase',
               }}
             >
-              Technical Skills and Personal Qualities
+              Continuously Learning Technical Skills and Personal Qualities
             </Typography>
             <div className={classes.skillsWrapper}>
               <Grid

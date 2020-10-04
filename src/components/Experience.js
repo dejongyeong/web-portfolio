@@ -48,8 +48,8 @@ const useStyles = makeStyles((theme) => ({
       textShadow: '1px -1px 4px rgba(182, 211, 213, 1)',
     },
     '& p': {
-      color: '#222831',
-      fontWeight: '400',
+      color: '#393e46',
+      fontWeight: '300',
       fontFamily: 'Lato, sans-serif',
       textTransform: 'lowercase',
     },

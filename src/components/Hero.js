@@ -125,7 +125,7 @@ function Hero() {
         strength={350}
         bgImageAlt="Background Image"
         bgImageStyle={{
-          opacity: '80%',
+          opacity: '60%',
         }}
         renderLayer={() => (
           <div>
