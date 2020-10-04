@@ -71,8 +71,10 @@ const useStyle = makeStyles((theme) => ({
   contactWrap: {
     width: '100%',
     height: '100%',
-    border: '2px solid black',
     margin: '3% auto 0 auto',
+    backgroundColor: 'rgba(46, 88, 91, 0.5)',
+    borderRadius: '10px',
+    boxShadow: '1px 1px 4px rgba(182, 211, 213, 0.2)',
   },
   copyright: {
     margin: '2% auto 0 auto',
@@ -113,9 +115,10 @@ function Contact() {
             <Typography
               variant="body1"
               style={{
-                color: '#00adb5',
+                color: '#222831',
                 fontFamily: 'Lato, sans-serif',
-                fontWeight: 'bold',
+                textTransform: 'lowercase',
+                fontWeight: '400',
               }}
             >
               a little bit about me and feel free to get in touch with me

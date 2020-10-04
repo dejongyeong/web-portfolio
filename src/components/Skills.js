@@ -253,9 +253,9 @@ function Skills() {
             <Typography
               variant="body1"
               style={{
-                color: '#00adb5',
+                color: '#222831',
                 fontFamily: 'Lato, sans-serif',
-                fontWeight: 'bold',
+                fontWeight: '400',
                 textTransform: 'lowercase',
               }}
             >

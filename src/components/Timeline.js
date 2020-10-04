@@ -6,7 +6,13 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 import { Star, School, Work } from '@material-ui/icons';
 import uuid from 'react-uuid';
-import { Chip, makeStyles, Typography } from '@material-ui/core';
+import {
+  Chip,
+  makeStyles,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core';
 
 const mainBackgroundColor = '#2e585b';
 const subBackgroundColor = '#393e46';
@@ -144,7 +150,6 @@ const useStyles = makeStyles((theme) => ({
 
 function ExperienceList() {
   const classes = useStyles();
-
   return experiences.map((experience) => (
     <VerticalTimelineElement
       key={experience.id}
@@ -188,9 +193,15 @@ function Technology(props) {
 }
 
 function Timeline() {
+  const theme = useTheme();
+  const match = useMediaQuery(theme.breakpoints.up('lg'));
+
   return (
     <>
-      <VerticalTimeline className="vertical-timeline-custom-line">
+      <VerticalTimeline
+        className="vertical-timeline-custom-line"
+        animate={match}
+      >
         <ExperienceList />
         <VerticalTimelineElement
           iconStyle={{ background: '#ffffff', color: '#00adb5' }}
