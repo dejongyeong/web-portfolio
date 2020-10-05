@@ -86,14 +86,18 @@ const useStyles = makeStyles((theme) => ({
   about: {
     width: '80%',
     margin: '0 auto 1% auto',
+    padding: '1.5%',
     [theme.breakpoints.down('xl')]: {
       marginBottom: '3%',
+      width: '100%',
     },
     [theme.breakpoints.down('lg')]: {
       marginBottom: '5%',
+      padding: '3%',
     },
     [theme.breakpoints.down('md')]: {
       margin: '0 auto 7% auto',
+      padding: '5%',
     },
     '& p': {
       fontFamily: 'Lato, sans-serif',
@@ -114,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
       textDecorationColor: '#2e585b',
     },
     backgroundColor: 'rgba(182, 211, 213, 0.2)',
-    padding: '1.5%',
+
     borderRadius: '10px',
   },
 }));

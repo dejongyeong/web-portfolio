@@ -22,6 +22,7 @@ const contents = [
     icons: faCogs,
     skillList: [
       'Python',
+      'Version Control',
       'HTML • CSS • SCSS',
       'Java ',
       'Bootstrap 4',
@@ -169,7 +170,7 @@ const useStyle = makeStyles((theme) => ({
   },
   paper: {
     boxSizing: 'border-box',
-    height: '550px',
+    height: '580px',
     width: '100%',
     textAlign: 'center !important',
     backgroundColor: 'rgba(46, 88, 91, 0.8)',
