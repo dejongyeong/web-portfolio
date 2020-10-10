@@ -1,6 +1,5 @@
 # Online Portfolio
 
-\
 _The first version of online portfolio was built during leisure time. Objective is to learn new frameworks for front-end development._
 
 **Tools and Frameworks:**
