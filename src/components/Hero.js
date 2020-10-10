@@ -86,7 +86,6 @@ const useStyles = makeStyles((theme) => ({
       textTransform: 'uppercase',
       fontWeight: '800',
       marginTop: '0.5%',
-      textShadow: '1px -1px 4px rgba(182, 211, 213, 1)',
     },
   },
   description: {

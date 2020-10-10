@@ -13,6 +13,7 @@ const links = [
   'https://www.linkedin.com/in/de-jong-yeong/',
 ];
 const linksIcon = [faGithubSquare, faOrcid, faLinkedin];
+const classes = ['github', 'orcid', 'linkedin'];
 
 const useStyles = makeStyles((theme) => ({
   social: {
@@ -20,8 +21,14 @@ const useStyles = makeStyles((theme) => ({
     '& a': {
       color: '#222831',
     },
-    '& a:hover': {
-      color: '#00adb5',
+    '& .github > a:hover': {
+      color: '#000000',
+    },
+    '& .linkedin > a:hover': {
+      color: '#0e76ab',
+    },
+    '& .orcid > a:hover': {
+      color: '#a6ce39',
     },
   },
 }));
@@ -40,8 +47,8 @@ export default function SocialIcons() {
       >
         {links.map((text, index) => (
           // key is required for react!!
-          <Grid item xs={4} key={text}>
-            <a href={text} target="blank">
+          <Grid item xs={4} key={text} className={classes[index]}>
+            <a href={text} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={linksIcon[index]} size="lg" swapOpacity />
             </a>
           </Grid>

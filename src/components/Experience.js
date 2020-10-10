@@ -45,11 +45,10 @@ const useStyles = makeStyles((theme) => ({
         margin: '7% 0 3% 0',
         fontSize: '2.5rem',
       },
-      textShadow: '1px -1px 4px rgba(182, 211, 213, 1)',
     },
     '& p': {
       color: '#393e46',
-      fontWeight: '300',
+      fontWeight: '400',
       fontFamily: 'Lato, sans-serif',
       textTransform: 'lowercase',
     },

@@ -1,14 +1,9 @@
-import {
-  Grid,
-  makeStyles,
-  Paper,
-  TextField,
-  Typography,
-} from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 import { Parallax } from 'react-parallax';
 
 import Backdrop from '../img/contact-background-img.jpg';
+import ContactButton from './ContactButton';
 
 const useStyle = makeStyles((theme) => ({
   contactLayer: {
@@ -55,7 +50,6 @@ const useStyle = makeStyles((theme) => ({
       marginBottom: '0',
       marginTop: '3%',
       textAlign: 'center',
-      textShadow: '1px -1px 4px rgba(182, 211, 213, 1)',
       [theme.breakpoints.down('sm')]: {
         marginTop: '7%',
         fontSize: '2.5rem',
@@ -66,6 +60,7 @@ const useStyle = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('lg')]: {
       margin: '7% auto 15% auto',
+      width: '85%',
     },
     [theme.breakpoints.down('md')]: {
       margin: '15% auto',
@@ -78,14 +73,14 @@ const useStyle = makeStyles((theme) => ({
     color: '#393e46',
     fontFamily: 'Lato, sans-serif',
     textTransform: 'lowercase',
-    fontWeight: '300',
+    fontWeight: '400',
     textAlign: 'center',
   },
   contactWrap: {
     margin: '3% auto 0 auto',
     width: '100%',
     height: '100%',
-    backgroundColor: 'rgba(46, 88, 91, 0.7)',
+    backgroundColor: 'rgba(46, 88, 91, 0.8)',
     padding: '2% 3%',
     boxSizing: 'border-box',
     borderRadius: '10px',
@@ -119,10 +114,10 @@ const useStyle = makeStyles((theme) => ({
     margin: '0 auto',
     '& p': {
       fontFamily: 'Lato, sans-serif',
-      fontWeight: '400',
+      fontWeight: '300',
       fontSize: '1rem',
       textAlign: 'center',
-      color: '#c5cddd',
+      color: '#fcfcfc',
     },
   },
 }));
@@ -158,12 +153,13 @@ function Contact() {
               <span>Contact</span> Me
             </Typography>
             <Typography variant="body1" className={classes.subtitle}>
-              a little bit about me and feel free to get in touch with me
+              feel free to get in touch with me
             </Typography>
             <div className={classes.contactWrap}>
               <div className={classes.about}>
                 <About />
               </div>
+              <ContactButton />
               <div className={classes.contact}>dddd</div>
               {/* <Grid
                 container

@@ -23,7 +23,7 @@ const contents = [
     skillList: [
       'Python',
       'Version Control',
-      'HTML • CSS • SCSS',
+      'HTML5 • CSS3 • SCSS',
       'Java ',
       'Bootstrap 4',
       'JavaScript',
@@ -256,7 +256,7 @@ function Skills() {
               style={{
                 color: '#393e46',
                 fontFamily: 'Lato, sans-serif',
-                fontWeight: '300',
+                fontWeight: '400',
                 textTransform: 'lowercase',
               }}
             >

@@ -20,7 +20,7 @@ const StyledButton = withStyles({
   root: {
     backgroundColor: 'transparent',
     width: '200px',
-    borderRadius: '30px',
+    borderRadius: '5px',
     boxSizing: 'border-box',
     fontFamily: 'Montserrat, sans-serif',
     border: '2px solid #2E585B',
