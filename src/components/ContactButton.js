@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: '30px',
     borderRadius: '0%',
     position: 'relative',
-    backgroundColor: '#00adb5',
+    backgroundColor: 'rgba(0, 173, 181, 0.05)',
   },
   iconsContent: {
     position: 'absolute',

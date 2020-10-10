@@ -4,6 +4,7 @@ import { Parallax } from 'react-parallax';
 
 import Backdrop from '../img/contact-background-img.jpg';
 import ContactButton from './ContactButton';
+import ContactForm from './ContactForm';
 
 const useStyle = makeStyles((theme) => ({
   contactLayer: {
@@ -32,7 +33,7 @@ const useStyle = makeStyles((theme) => ({
   },
   content: {
     width: '50%',
-    height: '80%',
+    height: '100%',
     margin: '0 auto',
     position: 'relative',
     display: 'flex',
@@ -58,15 +59,16 @@ const useStyle = makeStyles((theme) => ({
         color: '#222831',
       },
     },
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('1025')]: {
       margin: '7% auto 15% auto',
       width: '85%',
+      height: '70%',
     },
     [theme.breakpoints.down('md')]: {
-      margin: '15% auto',
+      margin: '15% auto 0 auto',
     },
     [theme.breakpoints.down('sm')]: {
-      margin: '30% auto',
+      margin: '30% auto 0 auto',
     },
   },
   subtitle: {
@@ -79,12 +81,18 @@ const useStyle = makeStyles((theme) => ({
   contactWrap: {
     margin: '3% auto 0 auto',
     width: '100%',
-    height: '100%',
+    height: '80%',
     backgroundColor: 'rgba(46, 88, 91, 0.8)',
-    padding: '2% 3%',
+    padding: '30px',
     boxSizing: 'border-box',
     borderRadius: '10px',
     boxShadow: '1px 1px 4px rgba(182, 211, 213, 0.1)',
+    [theme.breakpoints.down('md')]: {
+      padding: '15px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '30px',
+    },
   },
   copyright: {
     margin: '4% auto 1% auto',
@@ -98,16 +106,13 @@ const useStyle = makeStyles((theme) => ({
         fontWeight: '600',
       },
     },
+    [theme.breakpoints.down('md')]: {
+      margin: '20% auto 0 auto',
+      paddingBottom: '15px',
+    },
   },
   root: {
     flexGrow: 1,
-  },
-  contact: {
-    width: '45%',
-    height: 'auto',
-    margin: '3% auto 0 auto',
-    border: '1px solid black',
-    color: '#222831',
   },
   about: {
     width: '100%',
@@ -118,6 +123,17 @@ const useStyle = makeStyles((theme) => ({
       fontSize: '1rem',
       textAlign: 'center',
       color: '#fcfcfc',
+      paddingTop: '5px',
+    },
+  },
+  contact: {
+    width: '80%',
+    height: 'auto',
+    margin: '3% auto 0 auto',
+    color: '#222831',
+    boxSizing: 'border-box',
+    [theme.breakpoints.down('md')]: {
+      width: '90%',
     },
   },
 }));
@@ -160,22 +176,9 @@ function Contact() {
                 <About />
               </div>
               <ContactButton />
-              <div className={classes.contact}>dddd</div>
-              {/* <Grid
-                container
-                className={classes.root}
-                spacing={3}
-                alignItems="center"
-              >
-                <Grid item xs={12} lg={5}>
-                  <div className={classes.about}>
-                    <About />
-                  </div>
-                </Grid>
-                <Grid item xs={12} lg={7}>
-                  <div className={classes.forms}>sss</div>
-                </Grid>
-              </Grid> */}
+              <div className={classes.contact}>
+                <ContactForm />
+              </div>
             </div>
           </div>
           <div className={classes.copyright}>
