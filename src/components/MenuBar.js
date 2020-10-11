@@ -67,7 +67,7 @@ function MenuBar(props) {
     { text: 'Home', link: '#home', icon: <Home /> },
     { text: 'Portfolio', link: '#portfolio', icon: <Folder /> },
     { text: 'Skills', link: '#skills', icon: <Build /> },
-    { text: 'Experience', link: '#experience', icon: <Timeline /> },
+    { text: 'Journey', link: '#experience', icon: <Timeline /> },
     { text: 'Contact', link: '#contact', icon: <Mail /> },
   ];
   const resumeLink = 'https://github.com/dejongyeong';

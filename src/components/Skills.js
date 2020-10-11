@@ -22,7 +22,8 @@ const contents = [
     icons: faCogs,
     skillList: [
       'Python',
-      'HTML • CSS • SCSS',
+      'Version Control',
+      'HTML5 • CSS3 • SCSS',
       'Java ',
       'Bootstrap 4',
       'JavaScript',
@@ -125,7 +126,7 @@ const useStyle = makeStyles((theme) => ({
       fontFamily: 'Montserrat, sans-serif',
       marginBottom: '0',
       marginTop: '8%',
-      textShadow: '1px -2px 3px rgba(150, 150, 150, 1)',
+      textShadow: '1px -1px 4px rgba(182, 211, 213, 1)',
       [theme.breakpoints.down('sm')]: {
         marginTop: '7%',
         fontSize: '2.5rem',
@@ -135,7 +136,7 @@ const useStyle = makeStyles((theme) => ({
       // },
     },
     '& span': {
-      color: '#393e46',
+      color: '#222831',
     },
     [theme.breakpoints.down('lg')]: {
       margin: '7% auto 15% auto',
@@ -169,10 +170,10 @@ const useStyle = makeStyles((theme) => ({
   },
   paper: {
     boxSizing: 'border-box',
-    height: '550px',
+    height: '580px',
     width: '100%',
     textAlign: 'center !important',
-    backgroundColor: 'rgba(46, 88, 91, 0.9)',
+    backgroundColor: 'rgba(46, 88, 91, 0.8)',
     color: '#ffffff',
     padding: '3% 5px',
     '& h5': {
@@ -238,7 +239,7 @@ function Skills() {
         bgImage={Backdrop}
         strength={350}
         bgImageAlt="Background Image"
-        bgImageStyle={{ opacity: '90%' }}
+        bgImageStyle={{ opacity: '60%' }}
         renderLayer={() => (
           <div>
             <div className={classes.skillsLayer} />
@@ -253,12 +254,13 @@ function Skills() {
             <Typography
               variant="body1"
               style={{
-                color: '#00adb5',
+                color: '#393e46',
                 fontFamily: 'Lato, sans-serif',
-                fontWeight: 'bold',
+                fontWeight: '400',
+                textTransform: 'lowercase',
               }}
             >
-              Technical Skills and Personal Qualities
+              Continuously Learning Technical Skills and Personal Qualities
             </Typography>
             <div className={classes.skillsWrapper}>
               <Grid
