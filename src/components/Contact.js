@@ -45,7 +45,7 @@ const useStyle = makeStyles((theme) => ({
       paddingTop: '1%',
       color: '#2e585b',
       fontWeight: '700',
-      letterSpacing: '4px',
+      letterSpacing: '2px',
       textTransform: 'uppercase',
       fontFamily: 'Montserrat, sans-serif',
       marginBottom: '0',
@@ -54,9 +54,6 @@ const useStyle = makeStyles((theme) => ({
       [theme.breakpoints.down('sm')]: {
         marginTop: '7%',
         fontSize: '2.5rem',
-      },
-      '& span': {
-        color: '#222831',
       },
     },
     [theme.breakpoints.down('1025')]: {
@@ -106,7 +103,7 @@ const useStyle = makeStyles((theme) => ({
       fontSize: '0.8rem',
       color: '#222831',
       '& span': {
-        color: '#00adb5',
+        color: '#2e585b',
         fontWeight: '600',
       },
     },
@@ -172,9 +169,7 @@ function Contact() {
       >
         <div className={classes.contactMain}>
           <div className={classes.content}>
-            <Typography variant="h3">
-              <span>Contact</span> Me
-            </Typography>
+            <Typography variant="h3">Contact Me</Typography>
             <Typography variant="body1" className={classes.subtitle}>
               feel free to get in touch with me
             </Typography>

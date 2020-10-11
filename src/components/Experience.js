@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '0.5%',
       color: '#2e585d',
       fontWeight: '700',
-      letterSpacing: '4px',
+      letterSpacing: '2px',
       fontFamily: 'Montserrat, sans-serif',
       textTransform: 'uppercase',
       '& span': {
@@ -178,9 +178,7 @@ function Experience() {
     <div className={classes.expWrapper}>
       <div className={classes.expContainer}>
         <div className={classes.expDescribe}>
-          <Typography variant="h3">
-            My <span>Journey</span>
-          </Typography>
+          <Typography variant="h3">Journey</Typography>
           <Typography variant="body1">
             A little bit about me, Work Experience and Qualifications
           </Typography>
