@@ -24,7 +24,8 @@
     "react-scripts": "3.4.3",
     "react-uuid": "^1.0.2",
     "react-vertical-timeline-component": "^3.0.2",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "yup": "^0.29.3"
   },
   "scripts": {
     "start": "react-scripts start",

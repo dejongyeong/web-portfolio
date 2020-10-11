@@ -1,6 +1,7 @@
 import React from 'react';
-import { useFormik } from 'formik';
+import { Formik } from 'formik';
 import { FormControl, makeStyles } from '@material-ui/core';
+import * as Yup from 'yup';
 
 const useStyle = makeStyles((theme) => ({
   wrapper: {
@@ -25,6 +26,9 @@ const useStyle = makeStyles((theme) => ({
       border: '0',
       resize: 'none',
       height: '200px',
+      color: '#2e585b',
+      fontFamily: 'Montserrat, sans-serif',
+      fontWeight: '500',
     },
   },
   control: {
@@ -73,98 +77,109 @@ const validate = (values) => {
   return errors;
 };
 
+const ContactSchema = Yup.object().shape({
+  name: Yup.string().required('* Required'),
+  email: Yup.string().email('* Invalid email!').required('* required'),
+  subject: Yup.string().required('* Required'),
+  message: Yup.string().required('* Required'),
+});
+
 const ContactForm = () => {
   const classes = useStyle();
 
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    },
-    validate,
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
   return (
-    <form onSubmit={formik.handleSubmit} className={classes.wrapper}>
-      <FormControl className={classes.control}>
-        {formik.touched.name && formik.errors.name ? (
-          <label htmlFor="name">
-            Name <span className={classes.showError}>{formik.errors.name}</span>
-          </label>
-        ) : (
-          <label htmlFor="name">Name</label>
-        )}
-        <input
-          id="name"
-          name="name"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.name}
-        />
-      </FormControl>
-      <FormControl className={classes.control}>
-        {formik.touched.email && formik.errors.email ? (
-          <label htmlFor="email">
-            Email Address{' '}
-            <span className={classes.showError}>{formik.errors.email}</span>
-          </label>
-        ) : (
-          <label htmlFor="email">Email Address</label>
-        )}
-        <input
-          id="email"
-          name="email"
-          type="email"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.email}
-        />
-      </FormControl>
-      <FormControl className={classes.control}>
-        {formik.touched.subject && formik.errors.subject ? (
-          <label htmlFor="subject">
-            Subject{' '}
-            <span className={classes.showError}>{formik.errors.subject}</span>
-          </label>
-        ) : (
-          <label htmlFor="subject">Subject</label>
-        )}
-        <input
-          id="subject"
-          name="subject"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.subject}
-        />
-      </FormControl>
-      <FormControl className={classes.control}>
-        {formik.touched.message && formik.errors.message ? (
-          <label htmlFor="message">
-            Message{' '}
-            <span className={classes.showError}>{formik.errors.message}</span>
-          </label>
-        ) : (
-          <label htmlFor="message">Message</label>
-        )}
-        <textarea
-          id="message"
-          name="message"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.message}
-        />
-      </FormControl>
-      <button className={classes.submit} type="submit">
-        Submit
-      </button>
-    </form>
+    <Formik
+      initialValues={{ name: '', email: '', subject: '', message: '' }}
+      validationSchema={ContactSchema}
+      onSubmit={(values, { resetForm }) => {
+        console.log(values);
+        resetForm({ values: '' });
+      }}
+    >
+      {(formik) => (
+        <form onSubmit={formik.handleSubmit} className={classes.wrapper}>
+          <FormControl className={classes.control}>
+            {formik.touched.name && formik.errors.name ? (
+              <label htmlFor="name">
+                Name{' '}
+                <span className={classes.showError}>{formik.errors.name}</span>
+              </label>
+            ) : (
+              <label htmlFor="name">Name</label>
+            )}
+            <input
+              id="name"
+              name="name"
+              type="text"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+            />
+          </FormControl>
+          <FormControl className={classes.control}>
+            {formik.touched.email && formik.errors.email ? (
+              <label htmlFor="email">
+                Email Address{' '}
+                <span className={classes.showError}>{formik.errors.email}</span>
+              </label>
+            ) : (
+              <label htmlFor="email">Email Address</label>
+            )}
+            <input
+              id="email"
+              name="email"
+              type="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+            />
+          </FormControl>
+          <FormControl className={classes.control}>
+            {formik.touched.subject && formik.errors.subject ? (
+              <label htmlFor="subject">
+                Subject{' '}
+                <span className={classes.showError}>
+                  {formik.errors.subject}
+                </span>
+              </label>
+            ) : (
+              <label htmlFor="subject">Subject</label>
+            )}
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.subject}
+            />
+          </FormControl>
+          <FormControl className={classes.control}>
+            {formik.touched.message && formik.errors.message ? (
+              <label htmlFor="message">
+                Message{' '}
+                <span className={classes.showError}>
+                  {formik.errors.message}
+                </span>
+              </label>
+            ) : (
+              <label htmlFor="message">Message</label>
+            )}
+            <textarea
+              id="message"
+              name="message"
+              type="text"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+            />
+          </FormControl>
+          <button className={classes.submit} type="submit">
+            Submit
+          </button>
+        </form>
+      )}
+    </Formik>
   );
 };
 
