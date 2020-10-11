@@ -15,7 +15,7 @@ const useStyle = makeStyles((theme) => ({
     transform: 'translate(-50%,-50%)',
     width: '100%',
     height: '100vh',
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('1441')]: {
       height: '100%',
     },
   },
@@ -26,13 +26,13 @@ const useStyle = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('1441')]: {
       height: '100%',
       alignItems: 'center',
     },
   },
   content: {
-    width: '50%',
+    width: '55%',
     height: '100%',
     margin: '0 auto',
     position: 'relative',
@@ -60,9 +60,9 @@ const useStyle = makeStyles((theme) => ({
       },
     },
     [theme.breakpoints.down('1025')]: {
-      margin: '7% auto 15% auto',
+      margin: '4% auto 3.5% auto',
       width: '85%',
-      height: '70%',
+      height: '85%',
     },
     [theme.breakpoints.down('md')]: {
       margin: '15% auto 0 auto',
@@ -93,6 +93,12 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       marginTop: '30px',
     },
+    [theme.breakpoints.down('1025')]: {
+      height: '100%',
+      padding: '10px',
+      // height: '70vh',
+    },
+    border: '1px solid black',
   },
   copyright: {
     margin: '4% auto 1% auto',
@@ -108,6 +114,9 @@ const useStyle = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('md')]: {
       margin: '20% auto 0 auto',
+      paddingBottom: '15px',
+    },
+    [theme.breakpoints.down('1025')]: {
       paddingBottom: '15px',
     },
   },

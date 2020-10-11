@@ -41,6 +41,9 @@ const useStyle = makeStyles((theme) => ({
       color: '#2e585b',
       fontFamily: 'Montserrat, sans-serif',
       fontWeight: '500',
+      [theme.breakpoints.down('1281')]: {
+        height: '140px',
+      },
     },
   },
   control: {
