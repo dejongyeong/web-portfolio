@@ -96,9 +96,7 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down('1025')]: {
       height: '100%',
       padding: '10px',
-      // height: '70vh',
     },
-    border: '1px solid black',
   },
   copyright: {
     margin: '4% auto 1% auto',
