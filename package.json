@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
@@ -24,7 +26,7 @@
     "react-responsive-carousel": "^3.2.10",
     "react-scripts": "3.4.3",
     "react-uuid": "^1.0.2",
-    "react-vertical-timeline-component": "^3.0.2",
+    "react-vertical-timeline-component": "^3.2.0",
     "styled-components": "^5.2.0",
     "yup": "^0.29.3"
   },

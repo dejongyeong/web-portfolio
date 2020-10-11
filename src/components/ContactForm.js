@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import {
   Button,
   CircularProgress,
+  Fade,
   FormControl,
   makeStyles,
   Snackbar,
@@ -112,8 +113,9 @@ const ContactForm = () => {
     setOpen(false);
   };
 
+  // Material UI snackbar error when  update to latest version ^5.0 due to transition
   return (
-    <React.Fragment>
+    <>
       <Snackbar
         open={open}
         autoHideDuration={4000}
@@ -122,6 +124,7 @@ const ContactForm = () => {
           vertical: 'bottom',
           horizontal: 'left',
         }}
+        TransitionComponent={Fade}
       >
         <Alert onClose={handleClose} severity={status}>
           {msg}
@@ -266,7 +269,7 @@ const ContactForm = () => {
           </form>
         )}
       </Formik>
-    </React.Fragment>
+    </>
   );
 };
 

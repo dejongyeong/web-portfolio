@@ -14,11 +14,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
     '& a': {
       textDecoration: 'none',
     },
     margin: '2% auto',
-    width: '50%',
+    width: 'auto',
     [theme.breakpoints.down('md')]: {
       margin: '3% auto 5% auto',
       width: '70%',
@@ -103,23 +104,25 @@ function ContactButton() {
 
   return (
     <div className={classes.wrapper}>
-      <Grid container justify="center" alignItems="center" spacing={3}>
-        {contacts.map((contact) => (
-          <Grid item key={contact.key}>
-            <div className={`${classes.aboutIcons} ${contact.style}`}>
-              <div className={classes.iconsContent}>
-                <a
-                  href={contact.links}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={contact.icons} size="lg" />
-                </a>
+      <div>
+        <Grid container justify="center" alignItems="center" spacing={3}>
+          {contacts.map((contact) => (
+            <Grid item key={contact.key}>
+              <div className={`${classes.aboutIcons} ${contact.style}`}>
+                <div className={classes.iconsContent}>
+                  <a
+                    href={contact.links}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={contact.icons} size="lg" />
+                  </a>
+                </div>
               </div>
-            </div>
-          </Grid>
-        ))}
-      </Grid>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
     </div>
   );
 }

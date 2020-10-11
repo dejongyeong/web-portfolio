@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   expDescribe: {
     textAlign: 'center',
+    marginTop: '1%',
     '& h3': {
       marginTop: '0.5%',
       color: '#2e585d',
@@ -83,16 +84,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   about: {
-    width: '80%',
-    margin: '0 auto 1% auto',
+    width: '90%',
+    margin: '0 auto',
     padding: '1.5%',
-    [theme.breakpoints.down('xl')]: {
-      marginBottom: '3%',
-      width: '100%',
-    },
+    marginBottom: '2%',
     [theme.breakpoints.down('lg')]: {
       marginBottom: '5%',
       padding: '3%',
+      width: '100%',
     },
     [theme.breakpoints.down('md')]: {
       margin: '0 auto 7% auto',
@@ -116,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: 'underline',
       textDecorationColor: '#2e585b',
     },
-    backgroundColor: 'rgba(182, 211, 213, 0.1)',
+    backgroundColor: 'rgba(182, 211, 213, 0.2)',
     borderRadius: '10px',
   },
 }));
