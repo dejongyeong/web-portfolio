@@ -6,6 +6,7 @@ import {
   faLinkedinIn,
   faOrcid,
 } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import uuid from 'react-uuid';
 
 const useStyles = makeStyles((theme) => ({
@@ -42,6 +43,12 @@ const useStyles = makeStyles((theme) => ({
         color: '#ffffff',
       },
       backgroundColor: '#a6ce39',
+    },
+    '& .gmail:hover': {
+      '& a': {
+        color: '#ffffff',
+      },
+      backgroundColor: '#b23121',
     },
   },
   aboutIcons: {
@@ -85,6 +92,12 @@ function ContactButton() {
       links: 'https://orcid.org/0000-0002-4626-8040',
       icons: faOrcid,
       style: 'orcid',
+    },
+    {
+      key: uuid(),
+      links: 'mailto: de.jong.yeong@gmail.com',
+      icons: faEnvelope,
+      style: 'gmail',
     },
   ];
 

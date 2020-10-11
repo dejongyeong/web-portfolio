@@ -5,15 +5,17 @@ import {
   faGithubSquare,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import { makeStyles, Grid } from '@material-ui/core';
 
 const links = [
   'https://github.com/dejongyeong',
-  'https://orcid.org/0000-0002-4626-8040',
   'https://www.linkedin.com/in/de-jong-yeong/',
+  'mailto: de.jong.yeong@gmail.com',
+  'https://orcid.org/0000-0002-4626-8040',
 ];
-const linksIcon = [faGithubSquare, faOrcid, faLinkedin];
-const classes = ['github', 'orcid', 'linkedin'];
+const linksIcon = [faGithubSquare, faLinkedin, faEnvelopeSquare, faOrcid];
+const classes = ['github', 'linkedin', 'email', 'orcid'];
 
 const useStyles = makeStyles((theme) => ({
   social: {
@@ -26,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
     },
     '& .linkedin > a:hover': {
       color: '#0e76ab',
+    },
+    '& .email > a:hover': {
+      color: '#b23121',
     },
     '& .orcid > a:hover': {
       color: '#a6ce39',
@@ -41,15 +46,15 @@ export default function SocialIcons() {
       <Grid
         container
         justify="center"
-        spacing={3}
+        spacing={0}
         alignItems="center"
         direction="row"
       >
         {links.map((text, index) => (
           // key is required for react!!
-          <Grid item xs={4} key={text} className={classes[index]}>
+          <Grid item xs={3} key={text} className={classes[index]}>
             <a href={text} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={linksIcon[index]} size="lg" swapOpacity />
+              <FontAwesomeIcon icon={linksIcon[index]} size="lg" />
             </a>
           </Grid>
         ))}
