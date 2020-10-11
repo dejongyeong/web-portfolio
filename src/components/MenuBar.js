@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import { Mail, Home, Folder, Timeline, Build } from '@material-ui/icons';
 import PropTypes from 'prop-types';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import MenuItems from './MenuItem';
 import MobileMenu from './MobileMenu';
@@ -23,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '400',
     marginLeft: theme.spacing(2),
     fontSize: '1.4rem',
+    color: '#2e585b',
+    textDecoration: 'none',
   },
   sectionMobile: {
     display: 'flex',
@@ -72,14 +75,22 @@ function MenuBar(props) {
   ];
   const resumeLink = 'https://github.com/dejongyeong';
 
+  const preventDefault = (event) => event.preventDefault();
+
   return (
     <div id="menu-bar">
       <MenuTransparentScroll {...props}>
         <AppBar position="fixed">
           <Toolbar>
-            <Typography variant="h6" className={classes.title}>
-              DJ
-            </Typography>
+            <AnchorLink
+              href="#home"
+              onClick={preventDefault}
+              offset={() => 0}
+              className={classes.title}
+            >
+              <Typography variant="h6">DJ</Typography>
+            </AnchorLink>
+
             <MenuItems menus={menus} resumeLink={resumeLink} />
             <div className={classes.sectionMobile}>
               <MobileMenu menus={menus} resumeLink={resumeLink} />
