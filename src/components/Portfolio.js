@@ -1,5 +1,4 @@
-import { Button, makeStyles, Typography } from '@material-ui/core';
-import { ExpandMore } from '@material-ui/icons';
+import { makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 
 import ProjectWeb from './Projects';
@@ -27,7 +26,6 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       margin: '8% auto',
     },
-    border: '1px solid black',
   },
   title: {
     textAlign: 'center',
@@ -45,26 +43,15 @@ const useStyle = makeStyles((theme) => ({
       },
     },
     '& p': {
-      color: '#393e46',
+      color: '#00adb5',
       fontFamily: 'Lato, sans-serif',
       textTransform: 'lowercase',
       fontWeight: '400',
     },
   },
-  viewMore: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: '0.9rem',
-    fontFamily: 'Montserrat, sans-serif',
-    '& .viewButton': {
-      color: '#2e585b',
-      fontWeight: '500',
-    },
-  },
   projects: {
     width: '100%',
-    margin: '4rem auto 0 auto',
+    margin: '3.5rem auto 0 auto',
     [theme.breakpoints.down('sm')]: {
       margin: '4% auto 0 auto',
     },
@@ -84,11 +71,6 @@ function Portfolio() {
         <div className={classes.projects}>
           <ProjectWeb />
           <ProjectMobile />
-        </div>
-        <div className={classes.viewMore}>
-          <Button className="viewButton">
-            View More <ExpandMore />
-          </Button>
         </div>
       </div>
     </div>

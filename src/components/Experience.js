@@ -39,16 +39,13 @@ const useStyles = makeStyles((theme) => ({
       letterSpacing: '2px',
       fontFamily: 'Montserrat, sans-serif',
       textTransform: 'uppercase',
-      '& span': {
-        color: '#393e46',
-      },
       [theme.breakpoints.down('sm')]: {
         margin: '7% 0 3% 0',
         fontSize: '2.5rem',
       },
     },
     '& p': {
-      color: '#393e46',
+      color: '#00adb5',
       fontWeight: '400',
       fontFamily: 'Lato, sans-serif',
       textTransform: 'lowercase',
