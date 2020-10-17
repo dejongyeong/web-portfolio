@@ -2,6 +2,9 @@ import { Button, makeStyles, Typography } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
 import React from 'react';
 
+import ProjectWeb from './Projects';
+import ProjectMobile from './ProjectsMobile';
+
 const useStyle = makeStyles((theme) => ({
   wrapper: {
     background: '#ffffff',
@@ -48,14 +51,6 @@ const useStyle = makeStyles((theme) => ({
       fontWeight: '400',
     },
   },
-  projects: {
-    width: '100%',
-    margin: '2% auto 0 auto',
-    [theme.breakpoints.down('sm')]: {
-      margin: '4% auto 0 auto',
-    },
-    border: '1px solid black',
-  },
   viewMore: {
     display: 'flex',
     alignItems: 'center',
@@ -67,6 +62,13 @@ const useStyle = makeStyles((theme) => ({
       fontWeight: '500',
     },
   },
+  projects: {
+    width: '100%',
+    margin: '4rem auto 0 auto',
+    [theme.breakpoints.down('sm')]: {
+      margin: '4% auto 0 auto',
+    },
+  },
 }));
 
 function Portfolio() {
@@ -76,10 +78,13 @@ function Portfolio() {
     <div className={classes.wrapper}>
       <div className={classes.container}>
         <div className={classes.title}>
-          <Typography variant="h3">Projects</Typography>
+          <Typography variant="h3">Works</Typography>
           <Typography variant="body1">more coming soon</Typography>
         </div>
-        <div className={classes.projects}>sdsdsakdjaslk</div>
+        <div className={classes.projects}>
+          <ProjectWeb />
+          <ProjectMobile />
+        </div>
         <div className={classes.viewMore}>
           <Button className="viewButton">
             View More <ExpandMore />
