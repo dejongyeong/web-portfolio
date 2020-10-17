@@ -70,7 +70,7 @@ function Portfolio() {
         </div>
         <div className={classes.projects}>
           <ProjectWeb />
-          <ProjectMobile />
+          {/* <ProjectMobile /> */}
         </div>
       </div>
     </div>
