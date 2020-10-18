@@ -1,13 +1,16 @@
 import {
   Box,
-  Button,
+  Chip,
   makeStyles,
   Tab,
   Tabs,
-  Typography,
   useMediaQuery,
+  withStyles,
 } from '@material-ui/core';
+import { Info, Link } from '@material-ui/icons';
 import React, { Fragment } from 'react';
+
+import { publications } from '../data/Publications';
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -18,17 +21,21 @@ const useStyle = makeStyles((theme) => ({
       display: 'flex',
       flexGrow: '1',
     },
+    overflowY: 'auto',
+    msOverflowStyle: 'none',
+    scrollbarWidth: 'none',
   },
   tabs: {
     [theme.breakpoints.up('768')]: {
-      width: '200px',
-      maxWidth: '200px',
+      width: '230px',
+      maxWidth: '230px',
       borderRight: `1px solid ${theme.palette.divider}`,
       '& button > span': {
         color: '#2e585b',
         fontWeight: '600',
         alignItems: 'flex-start !important',
         justifyContent: 'flex-start !important',
+        fontSize: '.85rem',
       },
     },
     [theme.breakpoints.down('lg')]: {
@@ -42,11 +49,68 @@ const useStyle = makeStyles((theme) => ({
   },
   items: {
     width: '100%',
-    overflowY: 'auto',
-    msOverflowStyle: 'none',
-    scrollbarWidth: 'none',
+    '& details': {
+      marginBottom: '1.15rem',
+    },
+    '& summary': {
+      padding: '.85rem',
+      backgroundColor: '#2e585b',
+      color: '#ffffff',
+      marginBottom: '0.5rem',
+      cursor: 'pointer',
+      borderRadius: '0.3rem',
+      outline: 'none',
+      fontWeight: '500',
+      fontFamily: 'Montserrat, sans-serif',
+      fontSize: '0.9rem',
+      transition: 'background-color 0.4s',
+      '&:hover': {
+        backgroundColor: '#336366',
+      },
+    },
+  },
+  content: {
+    padding: '0 .6rem',
+    lineHeight: '1.7rem',
+    fontFamily: 'Lato, sans-serif',
+    fontSize: '.95rem',
+    color: '#222831',
+    '& span': {
+      fontWeight: 'bold',
+    },
+  },
+  header: {
+    marginBottom: '.5rem',
+  },
+  authors: {
+    flexGrow: '1',
+    marginRight: '5%',
+  },
+  date: {
+    fontWeight: 'bolder',
+    color: '#00adb5',
+  },
+  status: {
+    marginTop: '1.5rem',
   },
 }));
+
+const CustomChip = withStyles({
+  root: {
+    backgroundColor: '#222831',
+  },
+  label: {
+    fontWeight: '300 !important',
+    fontSize: '.8rem',
+    fontStyle: 'Montserrat, sans-serif',
+  },
+  clickable: {
+    backgroundColor: '#2e585b',
+    '&:hover': {
+      backgroundColor: '#00adb5',
+    },
+  },
+})(Chip);
 
 function a11yProps(index, isSmallScreen) {
   return {
@@ -72,13 +136,85 @@ function TabPanel(props) {
       }
       {...other}
     >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box p={2}>{children}</Box>}
     </div>
   );
+}
+
+function handleClick(event) {
+  const details = document.querySelectorAll('details'); // Fetch all the details element.
+  details.forEach((detail) => {
+    if (detail !== this) {
+      // if not current view
+      console.log(this);
+      detail.removeAttribute('open');
+    }
+  });
+}
+
+function Publications() {
+  const classes = useStyle();
+
+  return publications.map((publication) => (
+    <details key={publication.key} onClick={handleClick}>
+      <summary>{publication.title}</summary>
+      <div className={classes.content}>
+        <div className={classes.header} style={{ display: 'flex' }}>
+          <div className={classes.authors}>
+            <span>Author:</span> {publication.author} <br />
+            <span>Co-Author:</span> {publication.coAuthor} <br />
+            <span>Conference:</span> {publication.conference} <br />
+            <span>Location:</span> {publication.location} <br />
+          </div>
+          <div className={classes.date} style={{ flexGrow: '0' }}>
+            2020
+          </div>
+        </div>
+        <div className={classes.abstract}>
+          <span>Abstract: </span>
+          {publication.abstract}
+        </div>
+        <div className={classes.status}>
+          <Chip
+            label={publication.status}
+            color="primary"
+            variant="outlined"
+            style={{
+              marginRight: '.7rem',
+              color: '#00adb6',
+              borderColor: '#00adb5',
+            }}
+            icon={<Info />}
+          />
+          {publication.link === null ? (
+            <Fragment>
+              <CustomChip
+                label="Article"
+                component="a"
+                href={publication.link}
+                clickable
+                color="primary"
+                disabled
+              />
+            </Fragment>
+          ) : (
+            <Fragment>
+              <CustomChip
+                icon={<Link />}
+                label="Article"
+                component="a"
+                href={publication.link}
+                clickable
+                color="primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            </Fragment>
+          )}
+        </div>
+      </div>
+    </details>
+  ));
 }
 
 function Projects() {
@@ -92,7 +228,7 @@ function Projects() {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('768'));
 
   return (
-    <div className={classes.root}>
+    <div className={`${classes.root} no-scroll-bar`}>
       <Fragment>
         <Tabs
           orientation={isSmallScreen ? 'horizontal' : 'vertical'}
@@ -108,17 +244,12 @@ function Projects() {
           <Tab label="Publications" {...a11yProps(1, isSmallScreen)} />
         </Tabs>
       </Fragment>
-      <div className={`${classes.items} no-scroll-bar`}>
+      <div className={`${classes.items}`}>
         <TabPanel value={value} index={0} isSmallScreen={isSmallScreen}>
-          Item One <br />
-          <Button>sdsds</Button> <br />
-          Item One <br />
-          Item One <br />
-          Item One <br />
-          Item One <br />
+          Tab 1
         </TabPanel>
-        <TabPanel value={value} index={1}>
-          Item Two
+        <TabPanel value={value} index={1} isSmallScreen={isSmallScreen}>
+          <Publications />
         </TabPanel>
       </div>
     </div>

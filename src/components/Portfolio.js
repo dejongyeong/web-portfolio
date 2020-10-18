@@ -1,8 +1,7 @@
 import { makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 
-import ProjectWeb from './Projects';
-import ProjectMobile from './ProjectsMobile';
+import Project from './Projects';
 
 const useStyle = makeStyles((theme) => ({
   wrapper: {
@@ -69,8 +68,7 @@ function Portfolio() {
           <Typography variant="body1">more coming soon</Typography>
         </div>
         <div className={classes.projects}>
-          <ProjectWeb />
-          {/* <ProjectMobile /> */}
+          <Project />
         </div>
       </div>
     </div>
