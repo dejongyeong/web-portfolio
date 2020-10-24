@@ -1,16 +1,8 @@
-import {
-  Box,
-  Chip,
-  makeStyles,
-  Tab,
-  Tabs,
-  useMediaQuery,
-  withStyles,
-} from '@material-ui/core';
-import { Info, Link } from '@material-ui/icons';
+import { Box, makeStyles, Tab, Tabs, useMediaQuery } from '@material-ui/core';
 import React, { Fragment } from 'react';
 
-import { publications } from '../data/Publications';
+import { publications } from '../data/Articles';
+import Publications from './Publications';
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -95,23 +87,6 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const CustomChip = withStyles({
-  root: {
-    backgroundColor: '#222831',
-  },
-  label: {
-    fontWeight: '300 !important',
-    fontSize: '.8rem',
-    fontStyle: 'Montserrat, sans-serif',
-  },
-  clickable: {
-    backgroundColor: '#2e585b',
-    '&:hover': {
-      backgroundColor: '#00adb5',
-    },
-  },
-})(Chip);
-
 function a11yProps(index, isSmallScreen) {
   return {
     id: isSmallScreen ? `full-width-tab-${index}` : `vertical-tab-${index}`,
@@ -139,82 +114,6 @@ function TabPanel(props) {
       {value === index && <Box p={2}>{children}</Box>}
     </div>
   );
-}
-
-function handleClick(event) {
-  const details = document.querySelectorAll('details'); // Fetch all the details element.
-  details.forEach((detail) => {
-    if (detail !== this) {
-      // if not current view
-      console.log(this);
-      detail.removeAttribute('open');
-    }
-  });
-}
-
-function Publications() {
-  const classes = useStyle();
-
-  return publications.map((publication) => (
-    <details key={publication.key} onClick={handleClick}>
-      <summary>{publication.title}</summary>
-      <div className={classes.content}>
-        <div className={classes.header} style={{ display: 'flex' }}>
-          <div className={classes.authors}>
-            <span>Author:</span> {publication.author} <br />
-            <span>Co-Author:</span> {publication.coAuthor} <br />
-            <span>Conference:</span> {publication.conference} <br />
-            <span>Location:</span> {publication.location} <br />
-          </div>
-          <div className={classes.date} style={{ flexGrow: '0' }}>
-            2020
-          </div>
-        </div>
-        <div className={classes.abstract}>
-          <span>Abstract: </span>
-          {publication.abstract}
-        </div>
-        <div className={classes.status}>
-          <Chip
-            label={publication.status}
-            color="primary"
-            variant="outlined"
-            style={{
-              marginRight: '.7rem',
-              color: '#00adb6',
-              borderColor: '#00adb5',
-            }}
-            icon={<Info />}
-          />
-          {publication.link === null ? (
-            <Fragment>
-              <CustomChip
-                label="Article"
-                component="a"
-                href={publication.link}
-                clickable
-                color="primary"
-                disabled
-              />
-            </Fragment>
-          ) : (
-            <Fragment>
-              <CustomChip
-                icon={<Link />}
-                label="Article"
-                component="a"
-                href={publication.link}
-                clickable
-                color="primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              />
-            </Fragment>
-          )}
-        </div>
-      </div>
-    </details>
-  ));
 }
 
 function Projects() {
@@ -249,7 +148,7 @@ function Projects() {
           Tab 1
         </TabPanel>
         <TabPanel value={value} index={1} isSmallScreen={isSmallScreen}>
-          <Publications />
+          <Publications publications={publications} />
         </TabPanel>
       </div>
     </div>
