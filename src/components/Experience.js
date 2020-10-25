@@ -36,19 +36,16 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '0.5%',
       color: '#2e585d',
       fontWeight: '700',
-      letterSpacing: '4px',
+      letterSpacing: '2px',
       fontFamily: 'Montserrat, sans-serif',
       textTransform: 'uppercase',
-      '& span': {
-        color: '#393e46',
-      },
       [theme.breakpoints.down('sm')]: {
         margin: '7% 0 3% 0',
         fontSize: '2.5rem',
       },
     },
     '& p': {
-      color: '#393e46',
+      color: '#00adb5',
       fontWeight: '400',
       fontFamily: 'Lato, sans-serif',
       textTransform: 'lowercase',
@@ -178,9 +175,7 @@ function Experience() {
     <div className={classes.expWrapper}>
       <div className={classes.expContainer}>
         <div className={classes.expDescribe}>
-          <Typography variant="h3">
-            My <span>Journey</span>
-          </Typography>
+          <Typography variant="h3">Journey</Typography>
           <Typography variant="body1">
             A little bit about me, Work Experience and Qualifications
           </Typography>

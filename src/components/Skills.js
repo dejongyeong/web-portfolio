@@ -91,6 +91,9 @@ const useStyle = makeStyles((theme) => ({
     transform: 'translate(-50%,-50%)',
     width: '100%',
     height: '100vh',
+    [theme.breakpoints.down('xl')]: {
+      height: '100%',
+    },
     [theme.breakpoints.down('lg')]: {
       height: '100%',
     },
@@ -101,13 +104,16 @@ const useStyle = makeStyles((theme) => ({
     alignItems: 'flex-start',
     display: 'flex',
     justifyContent: 'center',
+    [theme.breakpoints.down('xl')]: {
+      height: '100%',
+    },
     [theme.breakpoints.down('lg')]: {
       height: '100%',
       alignItems: 'center',
     },
   },
   skillContents: {
-    width: '70%',
+    width: '75%',
     height: '85%',
     margin: '0 auto',
     position: 'relative',
@@ -121,36 +127,28 @@ const useStyle = makeStyles((theme) => ({
       padding: '1% 0 0 0',
       color: '#2e585d',
       fontWeight: '700',
-      letterSpacing: '4px',
+      letterSpacing: '2px',
       textTransform: 'uppercase',
       fontFamily: 'Montserrat, sans-serif',
       marginBottom: '0',
-      marginTop: '8%',
-      textShadow: '1px -1px 4px rgba(182, 211, 213, 1)',
+      marginTop: '6%',
       [theme.breakpoints.down('sm')]: {
-        marginTop: '7%',
+        marginTop: '0',
         fontSize: '2.5rem',
       },
-      // [theme.breakpoints.up('xl')]: {
-      //   animation: `$aboutEffect 2000ms ${theme.transitions.easing.easeInOut}`,
-      // },
     },
-    '& span': {
-      color: '#222831',
+    [theme.breakpoints.down('xl')]: {
+      margin: '0 auto 6% auto',
     },
     [theme.breakpoints.down('lg')]: {
-      margin: '7% auto 15% auto',
+      margin: '3% auto 10% auto',
     },
     [theme.breakpoints.down('md')]: {
-      margin: '15% auto',
+      margin: '13% auto',
     },
     [theme.breakpoints.down('sm')]: {
-      margin: '30% auto',
+      margin: '20% auto',
     },
-    // '@keyframes aboutEffect': {
-    //   '0%': { transform: 'translate3d(0, -50px, 0)' },
-    //   '100%': { transform: 'translate3d(0, 0, 0)' },
-    // },
   },
   skillsWrapper: {
     width: '95%',
@@ -248,9 +246,7 @@ function Skills() {
       >
         <div className={classes.skillsMain}>
           <div className={classes.skillContents}>
-            <Typography variant="h3">
-              My <span>Skills</span>
-            </Typography>
+            <Typography variant="h3">Skills</Typography>
             <Typography
               variant="body1"
               style={{
