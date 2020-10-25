@@ -1,7 +1,7 @@
 import uuid from 'react-uuid';
 
 import PortfolioScreenshot from '../img/portfolio-v1.PNG';
-import SentimentAnalysisScreenshot from '../img/sentiment-analysis.png';
+import SentimentAnalysisScreenshot from '../img/sentiment-analysis.PNG';
 import NoImagePreview from '../img/noimage.jpg'; // reference: https://luxmage.com/solution/the-retail-window-61.html
 
 const projectTypes = {
