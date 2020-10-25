@@ -1,8 +1,8 @@
 import uuid from 'react-uuid';
 
 import PortfolioScreenshot from '../img/portfolio-v1.PNG';
-import SentimentAnalysisScreenshot from '../img/sentiment-analysis.PNG';
-import MongoDbProjectScreenshot from '../img/mongo-db.png';
+import SentimentAnalysisScreenshot from '../img/sentiment-analysis.png';
+import NoImagePreview from '../img/noimage.jpg'; // reference: https://luxmage.com/solution/the-retail-window-61.html
 
 const projectTypes = {
   RECREATION: 'Recreation',
@@ -17,11 +17,11 @@ const previewType = {
 const portfolio = {
   title: 'Online Portfolio V1',
   description:
-    'The first iteration of my personal online portfolio. I was interested in learning React.js, so I decided to design and build my first version of online portfolio over the weekend would be the best way to learn the fundamentals of React.js',
+    'The first iteration of my personal online portfolio. I was interested in learning React.js, so I decided to design and build my first version of online portfolio over the weekend would be the best way to learn the fundamentals of React.js.',
   date: '2020',
   tech: ['React.JS', 'HTML', 'CSS', 'Material UI'],
   github: 'https://github.com/dejongyeong/web-portfolio',
-  preview: '/',
+  preview: '#',
 };
 
 const sentimentAnalysis = {
@@ -41,7 +41,7 @@ const mongoDbProject = {
   date: '2019',
   tech: [
     'PHP Laravel 5',
-    'Jessengers MongoDB API',
+    'MongoDB',
     'HTML',
     'CSS',
     'Bootstrap 4',
@@ -78,7 +78,7 @@ export const sideProjects = [
   {
     key: uuid(),
     type: projectTypes.COLLEGE,
-    image: MongoDbProjectScreenshot,
+    image: NoImagePreview,
     date: mongoDbProject.date,
     title: mongoDbProject.title,
     description: mongoDbProject.description,

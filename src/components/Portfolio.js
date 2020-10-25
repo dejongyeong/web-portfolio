@@ -9,7 +9,9 @@ import {
 import React from 'react';
 
 import { publications } from '../data/Articles';
+import { sideProjects } from '../data/SideProjects';
 import Publications from './Publications';
+import Projects from './Projects';
 
 const useStyle = makeStyles((theme) => ({
   wrapper: {
@@ -26,12 +28,8 @@ const useStyle = makeStyles((theme) => ({
     width: '80%',
     height: '100%',
     margin: '4% auto',
-    [theme.breakpoints.down('md')]: {
-      width: '90%',
-      margin: '6% auto',
-    },
-    [theme.breakpoints.down('sm')]: {
-      margin: '8% auto',
+    [theme.breakpoints.down('lg')]: {
+      margin: '6% auto 8% auto',
     },
   },
   title: {
@@ -72,7 +70,7 @@ const useStyle = makeStyles((theme) => ({
       flexGrow: '1',
     },
     overflowY: 'auto',
-    msOverflowStyle: 'none',
+    msOverflowStyle: '-ms-autohiding-scrollbar',
     scrollbarWidth: 'none',
   },
   tabs: {
@@ -172,7 +170,7 @@ function TabPanel(props) {
       }
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box sx={{ p: 2 }}>{children}</Box>}
     </div>
   );
 }
@@ -213,7 +211,7 @@ function Portfolio() {
             </React.Fragment>
             <div className={`${classes.items}`}>
               <TabPanel value={value} index={0} isSmallScreen={isSmallScreen}>
-                Tab 1
+                <Projects projects={sideProjects} />
               </TabPanel>
               <TabPanel value={value} index={1} isSmallScreen={isSmallScreen}>
                 <Publications publications={publications} />
