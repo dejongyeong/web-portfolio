@@ -9,7 +9,7 @@ import {
 import { ExpandMore, Info, Link } from '@material-ui/icons';
 import React from 'react';
 
-const useStyle = makeStyles({
+const useStyle = makeStyles((theme) => ({
   content: {
     padding: '0 .6rem',
     lineHeight: '1.7rem',
@@ -30,15 +30,22 @@ const useStyle = makeStyles({
     flexGrow: '1',
     marginRight: '3%',
   },
+  abstract: {
+    marginTop: '1rem',
+  },
   date: {
     fontWeight: 'bolder',
     color: '#00adb5',
     flexGrow: '0',
   },
   status: {
-    marginTop: '1.5rem',
+    marginTop: '1.2rem',
   },
-});
+  summaryDetails: {
+    padding: '.4rem',
+    marginBottom: '.8rem',
+  },
+}));
 
 const CustomAccordion = withStyles({
   root: {
@@ -108,7 +115,7 @@ function Publications(props) {
       >
         {publication.title}
       </CustomAccordionSummary>
-      <AccordionDetails style={{ padding: '.3rem' }}>
+      <AccordionDetails className={classes.summaryDetails}>
         <div className={classes.content}>
           <div className={classes.header}>
             <div className={classes.authors}>
@@ -116,11 +123,11 @@ function Publications(props) {
               <span>Co-Author:</span> {publication.coAuthor} <br />
               <span>Conference:</span> {publication.conference} <br />
               <span>Location:</span> {publication.location} <br />
+              <div className={classes.abstract}>
+                <span>Abstract: </span> {publication.abstract}
+              </div>
             </div>
             <div className={classes.date}>{publication.date}</div>
-          </div>
-          <div className={classes.abstract}>
-            <span>Abstract: </span> {publication.abstract}
           </div>
           <div className={classes.status}>
             <Chip
