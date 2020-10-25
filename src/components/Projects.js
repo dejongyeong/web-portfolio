@@ -175,8 +175,8 @@ function Projects(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3} justify="center" alignItems="flex-start">
-        {props.projects.map((project, index) => (
+      <Grid container spacing={3} alignItems="flex-start">
+        {props.projects.map((project) => (
           <Grid item key={project.key} style={{ marginBottom: '1rem' }}>
             <CustomCard>
               <CardActionArea
