@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: Run tests and generate coverage report
-        run: npm test -- --coverage
+        run: npm test -- --coverage --passWithNoTests
 
       - name: Codecov
         uses: codecov/codecov-action@v1.0.14
