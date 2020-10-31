@@ -51,6 +51,7 @@ First iteration of my personal online portfolio. I was interested in learning Re
 - Background photo by [Cosmic Timetraveler](https://unsplash.com/@cosmictimetraveler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 - Background photo by [Danis Lou](https://unsplash.com/@danislou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
+\
 _Built and Designed by De Jong Yeong @ 2020 August_
 
 \
