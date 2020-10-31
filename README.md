@@ -1,6 +1,6 @@
-# Online Portfolio
+# Online Portfolio Version 1.0
 
-### Version 1.0
+![Portfolio Landing Page](src/img/portfolio-v1.PNG)
 
 First iteration of my personal online portfolio. I was interested in learning React.js, so I decided to design and build my first version of online portfolio over the weekend apart from my postgraduate research studies, as this would be the best way for me to learn the fundamentals of React.js and Material UI. However, there is still room for improvement and have a lot to learn. Note: I'm open to feedbacks and suggestions.
 
@@ -12,16 +12,16 @@ First iteration of my personal online portfolio. I was interested in learning Re
 - Material UI
 - Figma
 - VS Code
-- GitHub Actions CI/CD: [Tutorial](https://dev.to/dyarleniber/setting-up-a-ci-cd-workflow-on-github-actions-for-a-react-app-with-github-pages-and-codecov-4hnp)
+- GitHub Actions CI/CD: [Tutorial](https://dev.to/dyarleniber/setting-up-a-ci-cd-workflow-on-github-actions-for-a-react-app-with-github-pages-and-codecov-4hnp) from [Dyarlen Iber](https://github.com/dyarleniber)
 
-**Some useful VS Code Extensions:**
+**Useful VS Code Extensions:**
 
-- ESLint (_create-react-app default_)
+- ESLint
 - Prettier
 - Debugger for Chrome
 
 \
-**Color Palette Selection**
+**Color Palette Selection and Design Ideas**
 
 - [Coolers](https://coolors.co/)
 - [Adobe Color](https://color.adobe.com/)
@@ -34,10 +34,15 @@ First iteration of my personal online portfolio. I was interested in learning Re
 - React Parallax Scrolling by [Richard Rutsche](https://github.com/rrutsche/react-parallax)
 
 \
-**Future Work**
+**Future Work and Improvement**
 
-- [ ] ESLint and/or Prettier integration in future portfolio
+- [ ] Further research on custom ESLint and/or Prettier, e.g. Google and AirBnB in future portfolio
 - [ ] Further research on responsiveness best practices, e.g. images, typography etc.
+- [ ] Improvement on UI - How to present projects and publications?
+- [ ] Colour Palette.
+- [ ] Use of Databases to store projects and publications.
+- [ ] Unit Testing.
+- [ ] Continue learning React.js with more recreation project ideas.
 
 \
 **Acknowledgement**
@@ -46,25 +51,75 @@ First iteration of my personal online portfolio. I was interested in learning Re
 - Background photo by [Cosmic Timetraveler](https://unsplash.com/@cosmictimetraveler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 - Background photo by [Danis Lou](https://unsplash.com/@danislou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/road?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-\
-Initial research was conducted before selecting which framework to use, e.g. size and load times, learning curve etc. as well as color palette selection. Here are some results found online:
-
-**React** one of the most popular frontend frameworks among Angular and Vue, was developed by Facebook and has gained popularity over the last few years. **Material UI** was chosen as the user interface framework that follows the principle of material design, created by Google.
-
-|                | Angular                                                                               | React                                                                                                        | Vue                                                                                                                                |
-| -------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Company        | Google                                                                                | Facebook                                                                                                     | Evan You                                                                                                                           |
-| Learning Curve | Steep learning curve, requires to lean associated concepts, i.e., TypeScript and MVC. | Medium learning curve. Not a complete framework and advanced features require the use of 3rd party libraries | Easiest learning curve. Provides higher customazability and has an overlap with Angular and React with respect to functionalities. |
-| Size           | Depends on bundle size                                                                | 116 KB                                                                                                       | 91 KB                                                                                                                              |
-| Stack          | MEAN                                                                                  | MERN                                                                                                         | -                                                                                                                                  |
-
-\
-[Shaumik](https://www.codeinwp.com/blog/angular-vs-vue-vs-react/) wrote an article about Vue, Angular and React and the main takeaways are as follow:
-
-- _Angular_ is the most mature framework, a complete package but has a steep learning curve. Angular is suitable for companies with large teams and developers who already use TypeScript.
-- _React_ has a large number of contributions from the community and has gained widespread acceptance. It is a good choice for developers who like some flexibility in terms of integrating with other frameworks seamlessly.
-- _Vue_ is the newest and remains to be seen how it does in the future. Vue should be the developer's choice if he prefers simplicity, but also simplicity.
-
-\
-\
 _Built and Designed by De Jong Yeong @ 2020 August_
+
+\
+\
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
