@@ -10,6 +10,7 @@ Designed and implemented over the weekend. The objective is to acquire knowledge
 - Material UI
 - Figma
 - VS Code
+- GitHub Actions
 
 **Some useful VS Code Extensions:**
 
