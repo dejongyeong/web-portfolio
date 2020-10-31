@@ -102,7 +102,7 @@ const CustomCard = withStyles((theme) => ({
       transition: 'transform 0.3s ease-out',
       position: 'relative',
     },
-    [theme.breakpoints.down('xl')]: {
+    [theme.breakpoints.down('lg')]: {
       maxWidth: '100% !important',
       height: '100%',
       maxHeight: '100% !important',
