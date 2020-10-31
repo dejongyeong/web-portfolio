@@ -125,8 +125,13 @@ const ContactForm = () => {
           horizontal: 'left',
         }}
         TransitionComponent={Fade}
+        style={{ width: '90%' }}
       >
-        <Alert onClose={handleClose} severity={status}>
+        <Alert
+          onClose={handleClose}
+          severity={status}
+          style={{ width: '100%', fontSize: '.8rem' }}
+        >
           {msg}
         </Alert>
       </Snackbar>
