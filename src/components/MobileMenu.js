@@ -12,6 +12,8 @@ import {
 import { Menu, Close, ListAlt } from '@material-ui/icons';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import PDF from '../static/resume.pdf';
+
 // tutorial from material ui documentation
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -86,7 +88,7 @@ export default function MobileMenu(props) {
           </ListItem>
         </AnchorLink>
       ))}
-      <a href={props.resumeLink} target="_blank" rel="noopener noreferrer">
+      <a href={PDF} target="_blank" rel="noopener noreferrer">
         <ListItem button key="resume">
           <ListItemIcon>
             <ListAlt />
