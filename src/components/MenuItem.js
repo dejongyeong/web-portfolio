@@ -3,6 +3,8 @@ import { Typography, makeStyles } from '@material-ui/core';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import PDF from '../static/resume.pdf';
+
 // tutorial: https://codepen.io/brunob182/pen/rWxYmW
 // initially tried react useStyle hook, but failed. Styled components as alternative
 const MenuItems = styled.div`
@@ -82,7 +84,7 @@ function MenuItem(props) {
         </MenuItems>
       ))}
       <MenuItems>
-        <a href={props.resumeLink} target="_blank" rel="noopener noreferrer">
+        <a href={PDF} target="_blank" rel="noopener noreferrer">
           <Typography variant="h6">Résumé</Typography>
         </a>
       </MenuItems>

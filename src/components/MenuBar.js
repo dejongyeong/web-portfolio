@@ -73,7 +73,6 @@ function MenuBar(props) {
     { text: 'Journey', link: '#experience', icon: <Timeline /> },
     { text: 'Contact', link: '#contact', icon: <Mail /> },
   ];
-  const resumeLink = 'https://github.com/dejongyeong';
 
   const preventDefault = (event) => event.preventDefault();
 
@@ -91,9 +90,9 @@ function MenuBar(props) {
               <Typography variant="h6">DJ</Typography>
             </AnchorLink>
 
-            <MenuItems menus={menus} resumeLink={resumeLink} />
+            <MenuItems menus={menus} />
             <div className={classes.sectionMobile}>
-              <MobileMenu menus={menus} resumeLink={resumeLink} />
+              <MobileMenu menus={menus} />
             </div>
           </Toolbar>
         </AppBar>

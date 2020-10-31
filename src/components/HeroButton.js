@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles, withStyles, Button, Grid } from '@material-ui/core';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-const resumeLink = 'https://github.com/dejongyeong';
+import PDF from '../static/resume.pdf';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -62,7 +62,7 @@ function HeroButton(props) {
           </AnchorLink>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <a href={resumeLink} target="_blank" rel="noopener noreferrer">
+          <a href={PDF} target="_blank" rel="noopener noreferrer">
             <StyledButton>{props.contact}</StyledButton>
           </a>
         </Grid>
