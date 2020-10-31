@@ -2,7 +2,9 @@
 
 ### Version 1.0
 
-Designed and implemented over the weekend. The objective is to acquire knowledge of the latest front-end JavaScript framework.
+First iteration of my personal online portfolio. I was interested in learning React.js, so I decided to design and build my first version of online portfolio over the weekend apart from my postgraduate research studies, as this would be the best way for me to learn the fundamentals of React.js and Material UI. However, there is still room for improvement and have a lot to learn. Note: I'm open to feedbacks and suggestions.
+
+![CI/CD](https://github.com/dejongyeong/web-portfolio/workflows/CI/CD/badge.svg) [![codecov](https://codecov.io/gh/dejongyeong/web-portfolio/branch/master/graph/badge.svg?token=KWG40XUKET)](undefined)
 
 **Tools and Frameworks:**
 

@@ -69,7 +69,7 @@ const useStyle = makeStyles((theme) => ({
   actionButton: {
     marginLeft: '.1rem',
     marginBottom: '.4rem',
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('xl')]: {
       position: 'absolute',
       bottom: '0',
       left: '.1rem',
@@ -84,6 +84,7 @@ const useStyle = makeStyles((theme) => ({
       },
       paddingLeft: '.8rem',
     },
+    paddingLeft: '.85rem',
   },
 }));
 
@@ -101,7 +102,7 @@ const CustomCard = withStyles((theme) => ({
       transition: 'transform 0.3s ease-out',
       position: 'relative',
     },
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('xl')]: {
       maxWidth: '100% !important',
       height: '100%',
       maxHeight: '100% !important',
