@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/web-portfolio/static/css/main.1fc57be5.chunk.css",
-    "main.js": "/web-portfolio/static/js/main.cd5e65b4.chunk.js",
-    "main.js.map": "/web-portfolio/static/js/main.cd5e65b4.chunk.js.map",
+    "main.js": "/web-portfolio/static/js/main.736861eb.chunk.js",
+    "main.js.map": "/web-portfolio/static/js/main.736861eb.chunk.js.map",
     "runtime-main.js": "/web-portfolio/static/js/runtime-main.7848a5d6.js",
     "runtime-main.js.map": "/web-portfolio/static/js/runtime-main.7848a5d6.js.map",
     "static/css/2.fe47a493.chunk.css": "/web-portfolio/static/css/2.fe47a493.chunk.css",
@@ -17,7 +17,7 @@
     "static/media/hero-background-img.f8337dcf.jpg": "/web-portfolio/static/media/hero-background-img.f8337dcf.jpg",
     "static/media/noimage.905fe75f.jpg": "/web-portfolio/static/media/noimage.905fe75f.jpg",
     "static/media/portfolio-v1.90ffbd86.PNG": "/web-portfolio/static/media/portfolio-v1.90ffbd86.PNG",
-    "static/media/resume.pdf": "/web-portfolio/static/media/resume.d80f6cba.pdf",
+    "static/media/resume.pdf": "/web-portfolio/static/media/resume.14870434.pdf",
     "static/media/sentiment-analysis.1415c36e.PNG": "/web-portfolio/static/media/sentiment-analysis.1415c36e.PNG",
     "static/media/skills-background-img.27c888dc.jpg": "/web-portfolio/static/media/skills-background-img.27c888dc.jpg"
   },
@@ -26,6 +26,6 @@
     "static/css/2.fe47a493.chunk.css",
     "static/js/2.8a3f61f3.chunk.js",
     "static/css/main.1fc57be5.chunk.css",
-    "static/js/main.cd5e65b4.chunk.js"
+    "static/js/main.736861eb.chunk.js"
   ]
 }
