@@ -14,25 +14,21 @@ const useStyle = makeStyles((theme) => ({
     top: '50%',
     transform: 'translate(-50%,-50%)',
     width: '100%',
-    height: '100vh',
+    height: '100%',
     [theme.breakpoints.down('1441')]: {
       height: '100%',
     },
   },
   contactMain: {
-    height: '100vh',
+    height: '100%',
     width: '100%',
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    [theme.breakpoints.down('1441')]: {
-      height: '100%',
-      alignItems: 'center',
-    },
   },
   content: {
-    width: '55%',
+    width: '60%',
     height: '100%',
     margin: '0 auto',
     position: 'relative',
@@ -42,7 +38,7 @@ const useStyle = makeStyles((theme) => ({
     flexDirection: 'column',
     boxSizing: 'border-box',
     '& h3': {
-      paddingTop: '1%',
+      paddingTop: '2.5%',
       color: '#2e585b',
       fontWeight: '700',
       letterSpacing: '2px',
@@ -67,6 +63,7 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       margin: '30% auto 0 auto',
     },
+    border: '1px solid black'
   },
   subtitle: {
     color: '#393e46',
@@ -78,7 +75,7 @@ const useStyle = makeStyles((theme) => ({
   contactWrap: {
     margin: '3% auto 0 auto',
     width: '100%',
-    height: '80%',
+    height: '100%',
     backgroundColor: 'rgba(46, 88, 91, 0.8)',
     padding: '30px',
     boxSizing: 'border-box',
@@ -91,7 +88,6 @@ const useStyle = makeStyles((theme) => ({
       marginTop: '30px',
     },
     [theme.breakpoints.down('1025')]: {
-      height: '100%',
       padding: '10px',
     },
   },
