@@ -63,7 +63,6 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       margin: '30% auto 0 auto',
     },
-    border: '1px solid black'
   },
   subtitle: {
     color: '#393e46',
