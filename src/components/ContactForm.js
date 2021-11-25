@@ -12,8 +12,8 @@ import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import MuiAlert from '@material-ui/lab/Alert';
 
-const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const SERVICE_ID = "service_zc5p1tl";
+const TEMPLATE_ID = "template_3k1mdpb";
 const USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
 
 const useStyle = makeStyles((theme) => ({
@@ -142,7 +142,7 @@ const ContactForm = () => {
           setSubmitting(true);
           setTimeout(() => {
             emailjs
-              .sendForm(
+              .send(
                 SERVICE_ID,
                 TEMPLATE_ID,
                 {
@@ -151,7 +151,7 @@ const ContactForm = () => {
                   subject: values.subject,
                   message: values.message,
                 },
-                USER_ID
+                USER_ID,
               )
               .then(() => {
                 setSubmitting(false);
