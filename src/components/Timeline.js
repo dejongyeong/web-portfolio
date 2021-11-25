@@ -21,10 +21,10 @@ const experiences = [
     id: uuid(),
     class: 'vertical-timeline-element--education',
     backgroundColor: mainBackgroundColor,
-    date: '2019 - present',
+    date: '2019 - April 2022',
     icon: <School />,
     mainHeading: 'Master by Research in Engineering',
-    subHeading: 'Institute of Technology, Tralee',
+    subHeading: 'Munster Technological University, Co. Kerry',
     description: (
       <>
         <Typography variant="body2">
@@ -47,6 +47,30 @@ const experiences = [
       </>
     ),
     technology: ['Python 3', 'ROS Framework', 'C++', 'WSL', 'Linux'],
+  },
+  {
+    id: uuid(),
+    class: 'vertical-timeline-element--work',
+    backgroundColor: subBackgroundColor,
+    date: 'Dec 2020 - May 2021',
+    icon: <Work />,
+    mainHeading: 'Full Stack Developer (Part Time)',
+    subHeading: 'IMaR Technology Gateway',
+    description: (
+      <>
+        <Typography variant="body2">
+          This project aims to prototype and develop an online platform that streamlines the detection 
+          and reporting of serious adverse events during clinical trials based on user's and medical 
+          facilities' geolocation. Researched relevant technologies to develop web and mobile applications for 
+          stakeholders. Developed RESTful API services with PHP Laravel 8.0 framework and MySQL database. 
+          Prototyped web and mobile applications with React JS, React Native, and Bootstrap 4. Adhered to 
+          best practices for version control, employing Git/GitHub. Formulated weekly progress reports 
+          for stakeholders and addressed the identified high-priority requirements to ensure successful 
+          project deliveries.
+        </Typography>
+      </>
+    ),
+    technology: ['ReactJS', 'React Native', 'PHP Laravel 8.0', 'MySQL', 'Bootstrap 4', 'LeafletJS', 'Git/GitHub']
   },
   {
     id: uuid(),
