@@ -142,7 +142,7 @@ const ContactForm = () => {
           setSubmitting(true);
           setTimeout(() => {
             emailjs
-              .send(
+              .sendForm(
                 SERVICE_ID,
                 TEMPLATE_ID,
                 {
