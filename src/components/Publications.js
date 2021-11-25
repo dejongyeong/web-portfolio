@@ -121,7 +121,7 @@ function Publications(props) {
             <div className={classes.authors}>
               <span>Author:</span> {publication.author} <br />
               <span>Co-Author:</span> {publication.coAuthor} <br />
-              <span>Conference:</span> {publication.conference} <br />
+              <span>{publication.type === 'conference' ? 'Conference:' : 'Journal:'}</span> {publication.conference} <br />
               <span>Location:</span> {publication.location} <br />
               <div className={classes.abstract}>
                 <span>Abstract: </span> {publication.abstract}

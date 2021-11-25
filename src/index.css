@@ -46,6 +46,6 @@ code {
     0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
-.no-scroll-bar::-webkit-scrollbar {
+/* .no-scroll-bar::-webkit-scrollbar {
   display: none;
-}
+} */

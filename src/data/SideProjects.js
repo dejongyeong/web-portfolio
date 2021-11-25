@@ -3,6 +3,7 @@ import uuid from 'react-uuid';
 import PortfolioScreenshot from '../img/portfolio-v1.PNG';
 import SentimentAnalysisScreenshot from '../img/sentiment-analysis.PNG';
 import NoImagePreview from '../img/noimage.jpg'; // reference: https://luxmage.com/solution/the-retail-window-61.html
+import Covid19Tracker from '../img/covid-19-tracker.PNG';
 
 const projectTypes = {
   RECREATION: 'Recreation',
@@ -13,6 +14,15 @@ const previewType = {
   UNAVAILABLE: 'Unavailable',
   PRIVATE: 'Private',
 };
+
+const covid19Tracker = {
+  title: 'Covid-19 Tracker Application',
+  description: 'Visualizes the global and country specific total confirmed, recovered, and deceased cases retrieved from Open Disease Data API.',
+  date: '2021',
+  tech: ['React.JS', 'Chart.JS', 'React Simple Maps', 'CircleCI', 'Heroku', 'Material UI', 'Styled Components'],
+  github: 'https://github.com/dejongyeong/covid-19-tracker',
+  preview: 'https://covid-19-tracker-apps.herokuapp.com/'
+}
 
 const portfolio = {
   title: 'Online Portfolio V1',
@@ -53,6 +63,17 @@ const mongoDbProject = {
 };
 
 export const sideProjects = [
+  {
+    key: uuid(),
+    type: projectTypes.RECREATION,
+    image: Covid19Tracker,
+    date: covid19Tracker.date,
+    title: covid19Tracker.title,
+    description: covid19Tracker.description,
+    tech: covid19Tracker.tech,
+    github: covid19Tracker.github,
+    preview: covid19Tracker.preview,
+  },
   {
     key: uuid(),
     type: projectTypes.RECREATION,
