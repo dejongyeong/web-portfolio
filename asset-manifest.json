@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/web-portfolio/static/css/main.0f7831f4.chunk.css",
-    "main.js": "/web-portfolio/static/js/main.3c9071ea.chunk.js",
-    "main.js.map": "/web-portfolio/static/js/main.3c9071ea.chunk.js.map",
+    "main.js": "/web-portfolio/static/js/main.1a6ab5b8.chunk.js",
+    "main.js.map": "/web-portfolio/static/js/main.1a6ab5b8.chunk.js.map",
     "runtime-main.js": "/web-portfolio/static/js/runtime-main.429ecdd2.js",
     "runtime-main.js.map": "/web-portfolio/static/js/runtime-main.429ecdd2.js.map",
     "static/css/2.9feaab34.chunk.css": "/web-portfolio/static/css/2.9feaab34.chunk.css",
-    "static/js/2.33039070.chunk.js": "/web-portfolio/static/js/2.33039070.chunk.js",
-    "static/js/2.33039070.chunk.js.map": "/web-portfolio/static/js/2.33039070.chunk.js.map",
+    "static/js/2.79af5201.chunk.js": "/web-portfolio/static/js/2.79af5201.chunk.js",
+    "static/js/2.79af5201.chunk.js.map": "/web-portfolio/static/js/2.79af5201.chunk.js.map",
     "index.html": "/web-portfolio/index.html",
     "static/css/2.9feaab34.chunk.css.map": "/web-portfolio/static/css/2.9feaab34.chunk.css.map",
     "static/css/main.0f7831f4.chunk.css.map": "/web-portfolio/static/css/main.0f7831f4.chunk.css.map",
-    "static/js/2.33039070.chunk.js.LICENSE.txt": "/web-portfolio/static/js/2.33039070.chunk.js.LICENSE.txt",
+    "static/js/2.79af5201.chunk.js.LICENSE.txt": "/web-portfolio/static/js/2.79af5201.chunk.js.LICENSE.txt",
     "static/media/contact-background-img.4e0a6e30.jpg": "/web-portfolio/static/media/contact-background-img.4e0a6e30.jpg",
     "static/media/covid-19-tracker.c37b51d5.PNG": "/web-portfolio/static/media/covid-19-tracker.c37b51d5.PNG",
     "static/media/hero-avatar.4620fedb.png": "/web-portfolio/static/media/hero-avatar.4620fedb.png",
     "static/media/hero-background-img.f8337dcf.jpg": "/web-portfolio/static/media/hero-background-img.f8337dcf.jpg",
     "static/media/noimage.905fe75f.jpg": "/web-portfolio/static/media/noimage.905fe75f.jpg",
+    "static/media/pokemon-wiki.c867a249.PNG": "/web-portfolio/static/media/pokemon-wiki.c867a249.PNG",
     "static/media/portfolio-v1.90ffbd86.PNG": "/web-portfolio/static/media/portfolio-v1.90ffbd86.PNG",
     "static/media/resume.pdf": "/web-portfolio/static/media/resume.6a647776.pdf",
     "static/media/sentiment-analysis.1415c36e.PNG": "/web-portfolio/static/media/sentiment-analysis.1415c36e.PNG",
@@ -25,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.429ecdd2.js",
     "static/css/2.9feaab34.chunk.css",
-    "static/js/2.33039070.chunk.js",
+    "static/js/2.79af5201.chunk.js",
     "static/css/main.0f7831f4.chunk.css",
-    "static/js/main.3c9071ea.chunk.js"
+    "static/js/main.1a6ab5b8.chunk.js"
   ]
 }
