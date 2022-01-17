@@ -5,6 +5,7 @@ import SentimentAnalysisScreenshot from '../img/sentiment-analysis.PNG';
 import NoImagePreview from '../img/noimage.jpg'; // reference: https://luxmage.com/solution/the-retail-window-61.html
 import Covid19Tracker from '../img/covid-19-tracker.PNG';
 import PokemonWiki from '../img/pokemon-wiki.PNG';
+import NlpSA from '../img/nlp-sa.PNG';
 
 const projectTypes = {
   RECREATION: 'Recreation',
@@ -16,6 +17,15 @@ const previewType = {
   UNAVAILABLE: 'Unavailable',
   PRIVATE: 'Private',
 };
+
+const sentimentAnalysisWebApp = {
+  title: 'NLP Sentiment Analysis Web App',
+  description: 'Analyse and predict the sentiment of a user-defined input using Python Django APIs and React.JS. It is an extension or improvement features of my Bachelor Degree Final Year Project: Sentiment Analysis Approach for Reputation Evaluation. This iteration uses Multinomial Naive Bayes and BERT Deep Learning model for classifying the input into positive or negative sentiment.',
+  date: '2022',
+  tech: ['React.JS', 'Python Django', 'Scikit-Learn', 'Tensorflow'],
+  github: 'https://github.com/dejongyeong/nlp-web-app/blob/main/README.md',
+  preview: previewType.UNAVAILABLE
+}
 
 const pokemonWiki = {
   title: 'Pokemon Wiki',
@@ -84,6 +94,17 @@ const mongoDbProject = {
 };
 
 export const sideProjects = [
+  {
+    key: uuid(),
+    type: projectTypes.RECREATION,
+    image: NlpSA,
+    date: sentimentAnalysisWebApp.date,
+    title: sentimentAnalysisWebApp.title,
+    description: sentimentAnalysisWebApp.description,
+    tech: sentimentAnalysisWebApp.tech,
+    github: sentimentAnalysisWebApp.github,
+    preview: sentimentAnalysisWebApp.preview,
+  },
   {
     key: uuid(),
     type: projectTypes.CHALLENGE,
