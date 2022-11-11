@@ -47,7 +47,7 @@ const covid19Tracker = {
     'Chart.JS',
     'React Simple Maps',
     'CircleCI',
-    'Heroku',
+    'Netlify',
     'Material UI',
     'Styled Components',
   ],
