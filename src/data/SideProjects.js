@@ -52,7 +52,7 @@ const covid19Tracker = {
     'Styled Components',
   ],
   github: 'https://github.com/dejongyeong/covid-19-tracker',
-  preview: 'https://covid-19-tracker-apps.herokuapp.com/',
+  preview: 'https://cov2-tracker.netlify.app/',
 };
 
 const portfolio = {
