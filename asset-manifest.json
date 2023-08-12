@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web-portfolio/static/css/main.a2adfd21.css",
-    "main.js": "/web-portfolio/static/js/main.1c661273.js",
+    "main.js": "/web-portfolio/static/js/main.e4d114e5.js",
     "static/media/hero-background-img.jpg": "/web-portfolio/static/media/hero-background-img.f8337dcfab1da2d80c1d.jpg",
     "static/media/skills-background-img.jpg": "/web-portfolio/static/media/skills-background-img.27c888dc280b20cb360e.jpg",
     "static/media/pokemon-wiki.PNG": "/web-portfolio/static/media/pokemon-wiki.c867a24902cf9a439b0e.PNG",
@@ -15,10 +15,10 @@
     "static/media/noimage.jpg": "/web-portfolio/static/media/noimage.905fe75f3a003682fda7.jpg",
     "index.html": "/web-portfolio/index.html",
     "main.a2adfd21.css.map": "/web-portfolio/static/css/main.a2adfd21.css.map",
-    "main.1c661273.js.map": "/web-portfolio/static/js/main.1c661273.js.map"
+    "main.e4d114e5.js.map": "/web-portfolio/static/js/main.e4d114e5.js.map"
   },
   "entrypoints": [
     "static/css/main.a2adfd21.css",
-    "static/js/main.1c661273.js"
+    "static/js/main.e4d114e5.js"
   ]
 }
