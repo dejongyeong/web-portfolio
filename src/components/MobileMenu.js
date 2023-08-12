@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const anchor = 'right';
-const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
+const iOS = window && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
 // prevent browser reload or refresh
 const preventDefault = (event) => event.preventDefault();
